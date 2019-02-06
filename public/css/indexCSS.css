@@ -1,3 +1,14 @@
 #name {
 	text-align: center;
 }
+
+.navbar-nav {
+	width: 100%;
+	text-align: center;
+}
+
+.navbar-nav .nav-item {
+	float: none;
+	display: inline-block;
+	font-size: 150%
+}
