@@ -2,6 +2,7 @@
  * GET exercise page.
  */
 
-exports.view = function(req, res){
-  res.render('exercise');
+exports.viewExercise = function(req, res){
+	var name = req.params.name;
+  	res.render('exercise');
 };

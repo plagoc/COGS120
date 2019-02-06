@@ -18,7 +18,19 @@
 
 	<!-- TODO: Create grid of workouts -->
 
+
+
+
 	<h1>Workouts here!</h1>
+	{{#each exercises}}
+	<div class='exercise' id="{{id}}">
+		<a href="exercise/{{name}}" class="thumbnail">
+			<img src="images/{{image}}" alt="Lorem pixel image" class="img">
+			<p>{{name}}</p>
+		</a>
+	</div>
+	{{/each}}
+
 	
 	<!-- Floor Navbar -->
 	<nav class="navbar navbar-default">
