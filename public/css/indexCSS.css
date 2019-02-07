@@ -9,3 +9,41 @@
 #searchbar {
 	text-align: center;
 }
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  /*text-align: center;*/
+  margin-top: 30px;
+  margin: auto;
+}
+
+.searchbar-content button {
+	float: left;
+	width: 20%;
+	padding: 15px;
+	background: #ddd;
+	font-size: 17px;
+	/*border: none;*/
+	border: 2px solid gray;
+  	border-radius: 5px;
+	cursor: pointer;
+}
+
+.searchbar-content input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.searchbar {
+	margin-bottom: 15px;
+}
+
+.searchfilter {
+	margin-bottom: 15px;
+}

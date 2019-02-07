@@ -35,7 +35,12 @@ exports.view = function(req, res) {
         'name': 'Sit-ups',
         'image': 'lorempixel.city.2.jpeg',
         'id': 'exercise'
-      }
+      },
+      {
+        'name': 'Calf Raises',
+        'image': 'lorempixel.technics.2.jpeg',
+        'id': 'exercise'
+      },
   	]
   });
 };
