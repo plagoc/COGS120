@@ -2,21 +2,14 @@
 	text-align: center
 }
 
-.navbar-nav {
-	width: 100%;
-	text-align: center;
-}
-
-.navbar-nav .nav-item {
-	float: none;
-	display: inline-block;
-	font-size: 150%
-}
-
 div .setting {
 	text-align: center;
 }
 
 .edit {
+	text-align: center;
+}
+
+.profile {
 	text-align: center;
 }

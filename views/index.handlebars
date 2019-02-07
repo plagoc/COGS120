@@ -5,24 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
 	<link rel="stylesheet" type="text/css" href="/css/indexCSS.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Welcome to Fit'Yall!</h1>
-			<p>&middot; An app made to help beginners get on track towards becoming healthy.</p>
+			<h1>Fit'Yall!</h1>
 		</div>
 	</div>
 
 	<!-- TODO: Create Search Bar (What will this do? Would it be easier to just have a box of most well-known workouts and thats it?) -->
+	<div class="container" id="searchbar">
+		<input type="text" name="search" placeholder="Search for a workout...">
+	</div>
 
 
 	<!-- Exercises user can click on -->
 	<div class="container">
 		<div class="row">
 			{{#each exercises}}
-			<div class='exercise col-sm' id="{{id}}">
+			<div class='exercise col-lg-4' id="{{id}}">
 				<a href="exercise/{{name}}" class="thumbnail">
 					<img src="images/{{image}}" alt="Lorem pixel image" class="img rounded">
 					<h3 class="display-4" id="name">{{name}}</h3>
@@ -35,14 +39,21 @@
 
 
 	<!-- Floor Navbar -->
-	<nav class="navbar navbar-default">
-  		<div class="container">
-    		<ul class="nav navbar-nav">
-      				<li class="nav-item"><a href="help/">Help</a></li>
-      				<li class="nav-item"><a href="#">Friends</a></li>
-      				<li class="nav-item"><a href="settings/">Settings</a></li>
-    		</ul>
-  		</div>
-	</nav>
+	<div class="container">
+		<div class="row navbar">
+			<div class="col-lg-4">
+				<a href="help/"><i class="fas fa-question fa-4x"></i></a>
+			</div>
+			<div class="col-lg-4">
+				<a href="#"><i class="fas fa-user-friends fa-4x"></i></a>
+			</div>
+			<div class="col-lg-4">
+				<a href="settings/"><i class="fas fa-cog fa-4x"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	
+
 </body>
 </html>

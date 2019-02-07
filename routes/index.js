@@ -20,7 +20,22 @@ exports.view = function(req, res) {
   			'name': 'Deadlifts',
   			'image': 'lorempixel.abstract.8.jpeg',
   			'id': 'exercise'
-  		}
+  		},
+      {
+        'name': 'Squats',
+        'image': 'lorempixel.abstract.1.jpeg',
+        'id': 'exercise'
+      },
+      {
+        'name': 'Curls',
+        'image': 'lorempixel.technics.1.jpeg',
+        'id': 'exercise'
+      },
+      {
+        'name': 'Sit-ups',
+        'image': 'lorempixel.city.2.jpeg',
+        'id': 'exercise'
+      }
   	]
   });
 };
