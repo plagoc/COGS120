@@ -1,103 +1,117 @@
 
 <!doctype html>
 
-	<head>
-		<title>Exercise Page</title>	
-		<link rel="stylesheet" type="text/css" href="/css/exerciseCSS.css">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+<head>
+	<title>Exercise Page</title>	
+	<link rel="stylesheet" type="text/css" href="/css/exerciseCSS.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-	<div class="container">
+<div class="containerExercise">
 
-		<div class="exerciseProgress">
-			<div class="exercise">
-				<h1>{{name}}</h1>
+	<div class="exerciseProgress">
+		<div class="exercise">
+			<h1>{{name}}</h1>
+		</div>
+		<div class="progress">
+			<h1>Progress</h1>
+		</div>
+	</div>
+
+	<div class="howTo">
+		<div class="howToTitle">
+			<h1>How To:</h1>
+		</div>
+		<div class="howToVideo">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Jtols_QhuWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="stats">
+		<div class="weightReps">
+			<div class="setHolder">
+				<h1></h1>
 			</div>
-			<div class="progress">
-				<h1>Progress</h1>
+			<div class="weight" id='weightTitle'>
+				<h1>Weight (lbs)</h1>
+			</div>
+			<div class="reps" id="repsTitle">
+				<h1>Reps</h1>
 			</div>
 		</div>
 
-		<div class="howTo">
-			<div class="howToTitle">
-				<h1>How To:</h1>
+		<div class="weightReps">
+			<div class="set">
+				<h1>Set 1</h1>
 			</div>
-			<div class="howToVideo">
-				<h1>Video</h1>
+			<div class="weight">
+				<form action="/action_page.php">
+					<input type="text" name="Weight lbs" value="00.0" class="userInput">
+				</form> 
+			</div>
+			<div class="reps">
+				<form action="/action_page.php">
+					<input type="text" name="Sets" value="0" class="userInput">
+				</form> 
+			</div>
+		</div>
+
+		<div class="weightReps">
+			<div class="set">
+				<h1>Set 2</h1>
+			</div>
+			<div class="weight">
+				<form action="/action_page.php">
+					<input type="text" name="Weight lbs" value="00.0" class="userInput">
+				</form> 
+			</div>
+			<div class="reps">
+				<form action="/action_page.php">
+					<input type="text" name="Sets" value="0" class="userInput">
+				</form> 
 			</div>
 		</div>
 
-		<div class="stats">
-			<div class="weightReps">
-				<div class="setHolder">
-					<h1></h1>
-				</div>
-				<div class="weight">
-					<h1>Weight (lbs)</h1>
-				</div>
-				<div class="reps">
-					<h1>Reps</h1>
-				</div>
+		<div class="weightReps">
+			<div class="set">
+				<h1>Set 3</h1>
 			</div>
-
-			<div class="weightReps">
-
-				<div class="set">
-					<h1>Set 1</h1>
-				</div>
-				<div class="weight">
-					<h1>100 (lbs)</h1>
-				</div>
-				<div class="reps">
-					<h1>10</h1>
-				</div>
+			<div class="weight">
+				<form action="/action_page.php">
+					<input type="text" name="Weight lbs" value="00.0" class="userInput">
+				</form> 
 			</div>
-
-			<div class="weightReps">
-				<div class="set">
-					<h1>Set 2</h1>
-				</div>
-				<div class="weight">
-					<h1>110 (lbs)</h1>
-				</div>
-				<div class="reps">
-					<h1>11</h1>
-				</div>
-			</div>
-
-			<div class="weightReps">
-				<div class="set">
-					<h1>Set 3</h1>
-				</div>
-				<div class="weight">
-					<h1>110 (lbs)</h1>
-				</div>
-				<div class="reps">
-					<h1>9</h1>
-				</div>
-			</div>
-
-			<div class="addRep">
-				<h1>+</h1>
-			</div>
-
-		</div>
-
-		<div class="BottomScreen">
-			<div class="help">
-				<h1>?</h1>
-			</div>
-			<div class="home">
-				<h1>(Home)</h1>
-			</div>
-			<div class="settings">
-				<h1>(Settings)</h1>
+			<div class="reps">
+				<form action="/action_page.php">
+					<input type="text" name="Sets" value="0" class="userInput">
+				</form> 
 			</div>
 		</div>
+
+		<div class="addRep">
+			<button type="submit" class="addRepButton">+ Add Rep </button>
 		</div>
 
 	</div>
+
+	<hr>
+	<!-- Floor Navbar -->
+	<div class="container">
+		<div class="row navbar">
+			<!-- <div class="col-lg-4"> -->
+			<a href="help/"><i class="fas fa-question fa-4x"></i></a>
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
+			<a href="#"><i class="fas fa-user-friends fa-4x"></i></a>
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
+			<a href="settings/"><i class="fas fa-cog fa-4x"></i></a>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+
 
 
 </html>

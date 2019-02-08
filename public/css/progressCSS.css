@@ -145,3 +145,29 @@
   	height: 100px;
   	float: right;
 }
+
+.graph {
+  text-align: center;
+  height: 500px;
+  padding: 5px;
+}
+
+.progressGraph {
+  text-align: center;
+}
+
+.progressTitle {
+  display: inline-block;
+  width: 30%;
+  border-bottom: 5px solid gray;
+}
+
+.historyTitle { 
+  display: inline-block;
+
+}
+
+.history {
+    text-align: center;
+
+}
