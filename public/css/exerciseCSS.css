@@ -2,12 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	//border: 1px solid green;
+	/*//border: 1px solid green;*/
 }
 
 .exerciseProgress {
 	text-align: center;
-	//border: 3px solid gray;
+	/*border: 3px solid gray;*/
   	height: 150px;
   	padding: 5px; 
 }
