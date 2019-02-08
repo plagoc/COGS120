@@ -4,8 +4,11 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
@@ -32,15 +35,15 @@
 	<div class="container searchfilter">
 		<div class="dropdown">
   			<button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  				Most Frequent
-  				<i class="fas fa-sort-down"></i>
+  				Filter Workouts
+  				<span class="caret"></span>
   			</button>
-  			<div class="dropdown-menu" aria-labelledby="dropdownFilter">
-    			<button class="dropdown-item" type="button">Lorem</button>
-    			<button class="dropdown-item" type="button">Ipsum</button>
-    			<button class="dropdown-item" type="button">Dolor</button>
-  			</div>
-		</div>
+  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+    			<li><button class="btn dropdown-item" type="button">Most Frequent</button></li>
+    			<li><button class="btn dropdown-item" type="button">Alphabetical (A-Z)</button></li> 
+    			<li><button class="btn dropdown-item" type="button">Alphabetical (Z-A)</button></li> 
+  			</ul>
+		</div> 
 	</div>
 
 
@@ -50,7 +53,7 @@
 			{{#each exercises}}
 			<div class='exercise col-lg-4' id="{{id}}">
 				<a href="exercise/{{name}}" class="thumbnail">
-					<img src="images/{{image}}" alt="Lorem pixel image" class="img rounded">
+					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
 					<h3 class="display-4" id="name">{{name}}</h3>
 				</a>
 			</div>
@@ -63,15 +66,15 @@
 	<!-- Floor Navbar -->
 	<div class="container">
 		<div class="row navbar">
-			<div class="col-lg-4">
+			<!-- <div class="col-lg-4"> -->
 				<a href="help/"><i class="fas fa-question fa-4x"></i></a>
-			</div>
-			<div class="col-lg-4">
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
 				<a href="#"><i class="fas fa-user-friends fa-4x"></i></a>
-			</div>
-			<div class="col-lg-4">
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
 				<a href="settings/"><i class="fas fa-cog fa-4x"></i></a>
-			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 	

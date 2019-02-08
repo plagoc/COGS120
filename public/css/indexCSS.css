@@ -47,3 +47,10 @@
 .searchfilter {
 	margin-bottom: 15px;
 }
+
+.dropdown-menu button {
+	padding: 0;
+	width: 100%;
+	border: 1px solid gray;
+	background: none;	
+}

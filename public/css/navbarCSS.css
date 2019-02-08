@@ -1,3 +1,7 @@
 .navbar {
 	text-align: center;
 }
+
+.row.navbar a {
+	margin: 50px;
+}
