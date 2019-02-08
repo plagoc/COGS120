@@ -12,6 +12,7 @@ var settings = require('./routes/settings');
 var help = require('./routes/help');
 var exercise = require('./routes/exercise');
 var progress = require('./routes/progress');
+var friends = require('./routes/friends')
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.get('/settings', settings.view);
 app.get('/help', help.view);
 app.get('/exercise/:name', exercise.viewExercise);
 app.get('/progress', progress.view);
+app.get('/friends', friends.view);
 // Example route
 // app.get('/users', user.list);
 
