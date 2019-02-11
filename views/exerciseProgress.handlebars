@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title>Exercise Page</title>	
+
+	<link rel="stylesheet" type="text/css" href="/css/exerciseProgressCSS.css">
+	<link rel="stylesheet" type="text/css" href="/css/tabsCSS.css">
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+
+	<script src="/js/tabs.js"></script>
+	<script src="/js/addRow.js"></script>
+</head>
+
+<div class="containerExerciseProgress" >
+
+	<div class="exerciseProgressContent">
+		<div class="exerciseProgressTabs">
+			<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">{{name}}</button>
+			<button class="tablinks" onclick="changeTab(event, 'progressTab')">Progress</button>
+		</div>
+
+		<div id="exerciseTab" class="tabcontent" onload="initializePage()">
+			<div class="howToContainer">
+				<div class="howToTitle">
+					<h1>How To:</h1>
+				</div>
+				<div class="videoContainer">
+					<iframe src="https://www.youtube.com/embed/Jtols_QhuWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="statsContainer">
+				<table id="myTable" class="setsTable">
+					<tr class=setsTableTitle>
+						<th></th>
+						<th> Weights </th>
+						<th> Reps </th>
+					</tr>
+				</table>
+
+				<div class="buttonContainer">
+					<button class="button" onclick="addSet()">add Set</button>
+					<button class="button" id="submitButton" onclick="addSet()">Submit</button>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div id="progressTab" class="tabcontent" onload="initializePage()">
+			
+			<div class="statsContainer">
+				<table id="myTable" class="setsTable">
+					<tr class=setsTableTitle>
+						<th> Sets </th>
+						<th> Weights </th>
+						<th> Reps </th>
+					</tr>
+				</table>
+				
+
+			</div>
+		</div>
+
+
+	</div>
+
+	
+
+	<hr>
+	<!-- Floor Navbar -->
+	<div class="container">
+		<div class="row navbar">
+			<!-- <div class="col-lg-4"> -->
+			<a href="/help/"><i class="fas fa-question fa-4x"></i></a>
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
+			<a href="/"><i class="fas fa-home fa-4x"></i></a>
+			<!-- </div> -->
+			<!-- <div class="col-lg-4"> -->
+			<a href="/settings/"><i class="fas fa-cog fa-4x"></i></a>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+
+
+
+</html>
