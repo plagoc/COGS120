@@ -1,0 +1,40 @@
+// Object with arrays of objects
+{
+	"exercises": [
+		{
+			"name": "Pull-Ups",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Bench",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Deadlifts",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Squats",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Curls",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Sit-Ups",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		},
+		{
+			"name": "Calf-Raises",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/Jtols_QhuWw"
+		}
+	]
+}

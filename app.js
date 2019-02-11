@@ -14,6 +14,7 @@ var exercise = require('./routes/exercise');
 var progress = require('./routes/progress');
 var friends = require('./routes/friends');
 var exerciseProgress = require('./routes/exerciseProgress');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -44,6 +45,7 @@ app.get('/exercise/:name', exercise.viewExercise);
 app.get('/progress', progress.view);
 app.get('/friends', friends.view);
 app.get('/exerciseProgress/:name', exerciseProgress.viewExercise);
+app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
 
