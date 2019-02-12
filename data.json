@@ -1,0 +1,39 @@
+{
+	"exercises": [
+		{
+			"name": "Pull-Ups",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/yLXn2OtQmxo"
+		},
+		{
+			"name": "Bench",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/gRVjAtPip0Y"
+		},
+		{
+			"name": "Deadlifts",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/hCDzSR6bW10"
+		},
+		{
+			"name": "Squats",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/t2b8UdqmlFs"
+		},
+		{
+			"name": "Curls",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/QZEqB6wUPxQ"
+		},
+		{
+			"name": "Sit-Ups",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/1fbU_MkV7NE"
+		},
+		{
+			"name": "Calf-Raises",
+			"id": "exercise",
+			"videoURL": "https://www.youtube.com/embed/gwLzBJYoWlI"
+		}
+	]
+}
