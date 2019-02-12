@@ -5,7 +5,6 @@ function changeTab(evt, tabType) {
 	*/
 	var i, tabcontent, tablinks;
 	tabcontent = document.getElementsByClassName("tabcontent");
-	console.log("hello");
 
 	for (i = 0; i < tabcontent.length; i++) {
 		tabcontent[i].style.display = "none";
@@ -23,5 +22,6 @@ function changeTab(evt, tabType) {
 function initializePage() {
 	document.getElementById("defaultOpen").click();
 }
+
 
 

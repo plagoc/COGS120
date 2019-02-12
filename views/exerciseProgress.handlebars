@@ -20,8 +20,11 @@
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 
+		<script src="/js/localStorage.js"></script>
 	<script src="/js/tabs.js"></script>
 	<script src="/js/addRow.js"></script>
+	
+
 </head>
 
 <div class="containerExerciseProgress" >
@@ -29,7 +32,7 @@
 	<div class="exerciseProgressContent">
 		<div class="exerciseProgressTabs">
 			<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">{{name}}</button>
-			<button class="tablinks" onclick="changeTab(event, 'progressTab')">Progress</button>
+			<button class="tablinks" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
 		</div>
 
 		<div id="exerciseTab" class="tabcontent" onload="initializePage()">
@@ -43,17 +46,21 @@
 			</div>
 
 			<div class="statsContainer">
-				<table id="myTable" class="setsTable">
+				<table class="setsTable">
 					<tr class=setsTableTitle>
 						<th></th>
 						<th> Weights </th>
 						<th> Reps </th>
 					</tr>
-				</table>
 
+				</table>
+				<table id="myTable" class="setsTable">
+
+				</table>
 				<div class="buttonContainer">
 					<button class="button" onclick="addSet()">add Set</button>
-					<button class="button" id="submitButton" onclick="addSet()">Submit</button>
+					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}'); removeRows();">Submit</button>
+
 				</div>
 
 			</div>
@@ -62,19 +69,15 @@
 
 		<div id="progressTab" class="tabcontent" onload="initializePage()">
 			
-			<div class="statsContainer">
-				<table id="myTable" class="setsTable">
-					<tr class=setsTableTitle>
-						<th> Sets </th>
-						<th> Weights </th>
-						<th> Reps </th>
-					</tr>
-				</table>
+			<div id ="thisOne" class="statsContainer" onload="populateProgressPage('{{name}}')">
+			</div>
+			<div class="graph">
+				<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plot.ly/~WGreenlaw/11.embed"></iframe>
+			</div>
+			<div class="buttonContainer">
 				
-
 			</div>
 		</div>
-
 
 	</div>
 
@@ -96,7 +99,5 @@
 		</div>
 	</div>
 </div>
-
-
 
 </html>

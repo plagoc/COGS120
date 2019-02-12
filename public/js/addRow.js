@@ -6,6 +6,7 @@ function addSet(){
   var myTd,myInput;
   var myTr = document.createElement('tr');
   myTr.setAttribute('class','unit-table');
+  myTr.id = "tableRow";
   for (var i=0; i<3;i++){
     myTd = document.createElement('td');
     myTd.id = "tableTdId";
@@ -24,6 +25,15 @@ function addSet(){
     }
   }
   setsTable.appendChild(myTr);
+}
+
+function removeRows() {
+    var Parent = document.getElementById("myTable");
+    while(Parent.hasChildNodes()) {
+      Parent.removeChild(Parent.firstChild);
+    }
+    setNum  =0;
+    addSet();
 }
 
 function initializePage() {
