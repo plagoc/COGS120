@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 
-		<script src="/js/localStorage.js"></script>
+	<script src="/js/localStorage.js"></script>
 	<script src="/js/tabs.js"></script>
 	<script src="/js/addRow.js"></script>
 	
@@ -49,7 +49,7 @@
 				<table class="setsTable">
 					<tr class=setsTableTitle>
 						<th></th>
-						<th> Weights </th>
+						<th id="weights"> Weights </th>
 						<th> Reps </th>
 					</tr>
 
@@ -58,7 +58,7 @@
 
 				</table>
 				<div class="buttonContainer">
-					<button class="button" onclick="addSet()">add Set</button>
+					<button class="button" onclick="addSet()">Add Set</button>
 					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}'); removeRows();">Submit</button>
 
 				</div>

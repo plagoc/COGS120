@@ -5,12 +5,22 @@ $(document).ready(function() {
 })
 
 function initializePage() {
-	$("#kgOptions").click(function(e) {
+	console.log("JS Connected!");
+	toggleKg();
+	toggleLbs();
+}
+
+// Toggle the weight
+function toggleKg() {
+	$("#kgOptions").on('click', function(e) {
 		console.log("clicked kg!");
-		$(this).button('toggle');
+		$("#kgOptions").button('toggle');
 	});
-	$("#lineOptions").click(function(e) {
-		console.log("clicked line!");
-		$(this).button('toggle');
+}
+
+function toggleLbs() {
+	$("#lbsOptions").on('click', function(e) {
+		console.log("clicked lbs!");
+		$("#lbsOptions").button('toggle');
 	});
 }
