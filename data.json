@@ -37,5 +37,3 @@
 		}
 	]
 }
-// TODO: Make this a dict of objects, where the key is the name of the workout, 
-// and the value is an object with more attributes

@@ -30,8 +30,8 @@
 	<!-- TODO: Create Search Bar (What will this do? Would it be easier to just have a box of most well-known workouts and thats it?) -->
 	<div class="container searchbar">
 		<div class="searchbar-content">
-			<input type="text" name="search" class="" placeholder="Search for a workout...">
-			<button type="submit"><i class="fa fa-search"></i></button>
+			<input type="text" name="search" class="" placeholder="Search for a workout..." id="searchbar">
+			<button type="submit" id="searchbar-submit"><i class="fa fa-search"></i></button>
 		</div>
 	</div>
 
@@ -51,7 +51,7 @@
 
 
 	<!-- Exercises user can click on -->
-	<div class="container">
+	<div class="container" id="exercises">
 		<div class="row">
 			{{#each exercises}}
 			<div class='exercise col-lg-4' id="{{id}}">
