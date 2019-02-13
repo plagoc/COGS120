@@ -25,7 +25,7 @@ function search() {
 function searchFilter(exercises, textToFind) {
 	var query = textToFind.toUpperCase();
 	for(var i = 0; i < exercises.length; i++) {
-		// TODO: Change to jQuery
+		// FIXME: Change to jQuery
 		var exercise = exercises[i].getElementsByTagName("a")[0];
 		var nameOfExercise = exercise.textContent || exercise.innerText;
 		if(nameOfExercise.toUpperCase().indexOf(query) > -1) {
@@ -36,19 +36,37 @@ function searchFilter(exercises, textToFind) {
 	}
 }
 
+
 // Handles dropdown filter
+// TODO: Fix bug where user has to click twice
 function dropdown() {
 	$("#dropdownFilter").on('click', function(e) {
 		e.preventDefault();
 		$(this).dropdown();
-		// Get the buttons that can be pressed 
-		var filters = $("li.filter").get();
-		// TODO: jQuery this
-		// Alphabetize A-Z if pressing the first filter
-		var aToZBtn = filters[0].getElementsByTagName("button")[0];
-		console.log(aToZBtn);
-		// Alphabetize Z-A if pressing second filter
 	})
 }
 
+// Handles alphabetizing exercises A to Z
+// From https://stackoverflow.com/questions/31266660/sort-divs-alphabetically-without-destroying-and-recreating-them
+function alphabetizeAtoZ() {
+	// FIXME: jQuery this
+	$('div#exercise').sort(function(a, b) {
+		if(a.getElementsByTagName("a")[0].innerText < b.getElementsByTagName("a")[0].innerText) {
+			return -1;
+		} else {
+			return 1;
+		}
+	}).appendTo("div#exercises.container");
+}
 
+// Handles alphabetizing exercises Z to A
+// From https://stackoverflow.com/questions/31266660/sort-divs-alphabetically-without-destroying-and-recreating-them
+function alphabetizeZtoA() {
+	$('div#exercise').sort(function(a, b) {
+		if(a.getElementsByTagName("a")[0].innerText < b.getElementsByTagName("a")[0].innerText) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}).appendTo("div#exercises.container");
+}
