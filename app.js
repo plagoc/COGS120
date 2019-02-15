@@ -36,12 +36,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/settings', settings.view);
 app.get('/help', help.view);
 app.get('/friends', friends.view);
 app.get('/exerciseProgress/:name', exerciseProgress.viewExercise);
-app.get('/login', login.view);
+app.get('/', login.view);
 // Example route
 // app.get('/users', user.list);
 

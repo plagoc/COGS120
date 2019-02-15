@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/indexCSS.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body>
+<!-- <body>
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Login</h1>
@@ -41,9 +41,34 @@
 
 
 	
-	<!-- TODO: Add textbox for Username -->
-	<!-- TODO: Add textbox for Password -->
-	<!-- TODO: Add button for logging in -->
+ TODO: Add button for logging in 
+</body> -->
 
+<body>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="button" name="submit" class="btn btn-info btn-md" value="submit" onclick="location.href='/index';"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
