@@ -28,7 +28,8 @@
 			<div class="col-lg-6 profile">
 				<img src="/images/lorempixel.people.2.jpeg" alt="lorem pixel img" class="thumbnail">
 				<div class="container">
-					<button type="button" class="edit btn btn-lg btn-primary">Edit</button>
+					<button type="button" class="edit btn btn-lg btn-primary" onclick="edit()" id="edit">Edit</button>
+					<button type="button" class="confirm btn btn-lg btn-primary" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -38,9 +39,9 @@
 					<h1 class="display-1">Display:</h1>
 				</div>
 				<div class="col-lg-6">
-					<h1 class="display-1">Lorem ipsum</h1>
-					<h1 class="display-1">Consectetur adipiscing elit</h1>
-					<h1 class="display-1">Etiam tincidunt</h1>
+					<h1 class="display-1" id="name">Lorem ipsum</h1>
+					<h1 class="display-1" id="goal">Consectetur adipiscing elit</h1>
+					<h1 class="display-1" id="display">Etiam tincidunt</h1>
 				</div>
 			</div>
 		</div>
