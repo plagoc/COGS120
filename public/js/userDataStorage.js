@@ -10,6 +10,7 @@
  * appMeasurement: either kg or lbs (setting sbar slider)
  * graphType: either bar or line (settings bar slider)
  * customWorkoutFilters[]: array contains arrays of custom workout filters.
+ *			-first entry is name of filter
  */ 
 
  function setUpUserData() {
@@ -19,7 +20,7 @@
 		profilePic: '',
 		appMeasurement: 'kg',
 		graphType: 'line',
-		customWorkoutFilters: []
+		customWorkoutFilters: [] 
 	}
 	
 	return userData;
@@ -44,6 +45,62 @@ function startup() {
   		alert("cannot use local Storage");
   		return false;
   	}
+}
+
+function createCustomFilter(name) {
+	if (!startup()) return false;
+	var userData = getUserData();
+	var filters = userData.customWorkoutFilters;
+	var newFilter = [];	
+
+	var isFound = false;
+	//find correct filter
+	for(var i=0; i< filters.length; i++) {
+		if(filters[i][0] == name){
+			isFound = true;
+		}
+	}
+
+	if(isFound) return false;
+	newFilter.push(name);
+	filters.push(newFilter);	
+	storeUserData(userData);
+}
+
+function editCustomFilter(name, exercise) {
+	if (!startup()) return false;
+	var userData = getUserData();
+	var filters = userData.customWorkoutFilters;
+	var filter = [];	
+	var isFound = false;
+	//find correct filter
+	for(var i=0; i<filters.length; i++) {
+		if(filters[i][0] == name){
+			filter = filters[i];
+			isFound = true;
+		}
+	}
+
+	if(!isFound) {
+		console.log("no filter matches name");
+		//createCustomFilter(name);
+		return false;
+	}
+
+	isFound = false;
+	//Search though matched filter for element
+	for(var i=0; i<filter.length; i++) {
+		if(filter[i] == exercise) {
+			filter.splice(i,1);
+			isFound = true;
+		} 
+	}
+	if(!isFound) {
+		filter.push(exercise);
+	}
+	
+	//filters.push(filter);
+	storeUserData(userData);
 }
 
 function updateProfleInfo(name, goal) {

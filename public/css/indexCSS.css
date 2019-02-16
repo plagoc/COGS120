@@ -54,3 +54,44 @@
 	border: 1px solid gray;
 	background: none;	
 }
+
+.customFormDiv {
+	width: 100%;
+}
+
+.customFormDiv button {
+	width: 100%;
+}
+
+/* Change background color of buttons on hover */
+.customFormDiv button:hover {
+  background-color: #4da6ff;
+}
+
+.thumbnaimCustom {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+
+}
+
+.customFilterInput {
+	width: 60%;
+	height: 30px;
+	display: inline-block;
+}
+
+.filterTitle {
+	display: inline-block;
+	font-size: 100%;
+}
+
+.customFilterConatiner {
+	width: 100%;
+	padding-bottom: 15px;
+	text-align: center;
+}

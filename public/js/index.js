@@ -8,6 +8,8 @@ function initializePage() {
 	console.log("JS connected!");
 	search();
 	dropdown();
+	$('#customForm').show();
+	$('#exerciseList').hide();
 }
 
 // Handles search button
@@ -69,4 +71,18 @@ function alphabetizeZtoA() {
 			return -1;
 		}
 	}).appendTo("div#exercises.container");
+}
+
+function createFilter() {
+	$('#customForm').show();
+	$('#exerciseList').hide();
+
+}
+
+function newFilter(name) {
+	createCustomFilter(name);
+}
+
+function toggleExercise(name, exercise) {
+	editCustomFilter(name, exercise);
 }

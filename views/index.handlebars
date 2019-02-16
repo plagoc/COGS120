@@ -6,9 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="/js/userDataStorage.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
+	
 
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
@@ -44,19 +46,35 @@
   			<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeAtoZ()">Alphabetical (A-Z)</button></li> 
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeZtoA()">Alphabetical (Z-A)</button></li> 
+    			<li class="filter"><button class="btn dropdown-item" type="button" onclick="createFilter()">Create Filter</button></li> 
   			</ul>
 		</div> 
 	</div>
 
 	<!-- Exercises user can click on -->
 	<div class="container" id="exercises">
-		<div class="row">
+		<div class="row" id="exerciseList">
 			{{#each exercises}}
 			<div class='exercise col-lg-4' id="{{id}}">
 				<a href="exerciseProgress/{{name}}" class="thumbnail">
 					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
 					<h3 class="display-4" id="name">{{name}}</h3>
 				</a>
+			</div>
+			{{/each}}
+		</div>
+		<div class="row" id="customForm">
+			<div class="customFilterConatiner">
+				<h3 class="filterTitle"> Filter Title: </h3>
+				<input type="text" name="customFilter" class="customFilterInput" placeholder="Custom Filter" id="customFilterName">			
+				<button class="thumbnaimCustom" onclick="newFilter()">	
+			</div>
+			{{#each exercises}}
+			<div class='customFormDiv' id="{{id}}">
+				<button class="thumbnaimCustom" onclick="toggleExercise('custom','{{name}}')">
+					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
+					<h3 class="display-4" id="name">{{name}}</h3>
+				</button>
 			</div>
 			{{/each}}
 		</div>
