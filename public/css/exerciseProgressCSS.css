@@ -93,6 +93,19 @@
   background-color: lightblue;
 }
 
+.user-Input {
+  width: 100%;
+}
+
+.recordRowTd {
+  width: 35%;
+  padding-right: 10px;
+}
+
+.titleRowTd {
+  width: 20%;
+}
+
 .setsTableTitle {
   margin-bottom: 10px;
   //border: 10px solid grey;
@@ -118,3 +131,32 @@
 #submitButton {
   background-color: lightgreen;
 }
+
+.containerEx {
+  width: 100%;
+}
+
+.navbarBottom {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+}
+
+.navbarBottom a{
+  width: 33%;
+  float: left;
+  display: block;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 10px; 
+  padding-bottom: 10px;
+
+}
+
+#settingOffset {
+  padding-left: 15%;
+}
+

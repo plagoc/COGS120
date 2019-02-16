@@ -30,13 +30,13 @@
 <div class="containerExerciseProgress" >
 
 	<div class="exerciseProgressContent">
-		<div class="exerciseProgressTabs">
-			<button class="tablinks" onclick="changeTab(event, 'infoTab')">{{name}}</button>
-			<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">Record</button>
-			<button class="tablinks" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
-
-		</div>
-
+		<div class="topNavbar">
+			<div class="exerciseProgressTabs">
+				<button class="tablinks" onclick="changeTab(event, 'infoTab')">{{name}}</button>
+				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">Record</button>
+				<button class="tablinks" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
+				</div>
+			</div>
 		<div id="infoTab" class="tabcontent">
 			<div class="howToContainer">
 				<div class="howToTitle">
@@ -63,7 +63,7 @@
 
 				</table>
 				<div class="buttonContainer">
-					<button class="button" onclick="addSet()">Add Set</button>
+					<button class="button" onclick="addSet()"> + </button>
 					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}'); removeRows();">Submit</button>
 
 				</div>
@@ -77,7 +77,6 @@
 			<div id ="thisOne" class="statsContainer" onload="populateProgressPage('{{name}}')">
 			</div>
 			<div class="graph">
-				<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plot.ly/~WGreenlaw/11.embed"></iframe>
 			</div>
 			<div class="buttonContainer">
 				
@@ -90,8 +89,8 @@
 
 	<hr>
 	<!-- Floor Navbar -->
-	<div class="container">
-		<div class="row navbar">
+	<div class="containerEx">
+		<div class="navbarBottom">
 			<!-- <div class="col-lg-4"> -->
 			<a href="/help/"><i class="fas fa-question fa-4x"></i></a>
 			<!-- </div> -->
@@ -99,7 +98,7 @@
 			<a href="/"><i class="fas fa-home fa-4x"></i></a>
 			<!-- </div> -->
 			<!-- <div class="col-lg-4"> -->
-			<a href="/settings/"><i class="fas fa-cog fa-4x"></i></a>
+			<a href="/settings/" id="settingOffset"><i class="fas fa-cog fa-4x"></i></a>
 			<!-- </div> -->
 		</div>
 	</div>

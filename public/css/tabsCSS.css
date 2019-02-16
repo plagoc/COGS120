@@ -8,28 +8,38 @@
   border: 1px solid #ccc;
   background-color: lightblue;
   font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 62px;
+}
+
+.topNavbar {
+  height: 60px;
 }
 
 /* Style the buttons that are used to open the tab content */
 .exerciseProgressTabs button {
   background-color: inherit;
   float: left;
-  border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  width: 33.3333%
+  width: 33.3333%;
+  border:2px solid grey;
 }
 
 /* Change background color of buttons on hover */
 .exerciseProgressTabs button:hover {
-  background-color: #4da6ff;
+  /*background-color: #4da6ff;
+  */
 }
 
 /* Create an active/current tablink class */
 .exerciseProgressTabs button.active {
-  background-color: #80bfff;
+  /*background-color: #80bfff;
+  */
 }
 
 /* Style the tab content */

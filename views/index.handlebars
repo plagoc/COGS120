@@ -21,12 +21,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Fit'Yall!</h1>
-		</div>
-	</div>
-
 	<hr>
 
 	<!-- TODO: Create Search Bar (What will this do? Would it be easier to just have a box of most well-known workouts and thats it?) -->
@@ -43,9 +37,10 @@
   				Filter Workouts
   				<span class="caret"></span>
   			</button>
-  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter" onload="addCustomWorkouts()">
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeAtoZ()">Alphabetical (A-Z)</button></li> 
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeZtoA()">Alphabetical (Z-A)</button></li> 
+    			<div id="addCustomWorkoutsHere"></div>
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="createFilter()">Create Filter</button></li> 
   			</ul>
 		</div> 
@@ -63,15 +58,15 @@
 			</div>
 			{{/each}}
 		</div>
-		<div class="row" id="customForm">
-			<div class="customFilterConatiner">
-				<h3 class="filterTitle"> Filter Title: </h3>
-				<input type="text" name="customFilter" class="customFilterInput" placeholder="Custom Filter" id="customFilterName">			
-				<button class="thumbnaimCustom" onclick="newFilter()">	
-			</div>
+		<div class="customFilterConatiner" id="FilterName">
+			<h3 class="filterTitle"> Filter Title: </h3>
+			<input type="text" name="custom" class="customFilterInput" placeholder="Custom Filter" id="customFilterName">
+		</div>
+		<div class="row" id="customForm">			
+			<button class="submitCustomFilterBtn" onclick="submitCustomFilter()">Submit!</button>
 			{{#each exercises}}
 			<div class='customFormDiv' id="{{id}}">
-				<button class="thumbnaimCustom" onclick="toggleExercise('custom','{{name}}')">
+				<button class="thumbnaimCustom" id='{{name}}' onclick="toggleExercise('custom','{{name}}')">
 					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
 					<h3 class="display-4" id="name">{{name}}</h3>
 				</button>

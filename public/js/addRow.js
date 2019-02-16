@@ -10,15 +10,22 @@ function addSet(){
   for (var i=0; i<3;i++){
     myTd = document.createElement('td');
     myTd.id = "tableTdId";
+
     if(i == 0){
+      myTd.setAttribute('class','titleRowTd');
+
+
       myTitle = document.createElement('h2');
       myTitle.innerHTML = "Set " + setNum;
       myTitle.id = "setTitleID";
       myTd.appendChild(myTitle);
       myTr.appendChild(myTd);
     } else {
+      myTd.setAttribute('class','recordRowTd');
+
       myInput = document.createElement('input');
       myInput.setAttribute('type','text');
+      myInput.setAttribute('class','user-Input');
       myInput.id = "inputFieldID";
       myTd.appendChild(myInput);
       myTr.appendChild(myTd);

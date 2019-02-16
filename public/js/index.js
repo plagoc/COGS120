@@ -8,8 +8,9 @@ function initializePage() {
 	console.log("JS connected!");
 	search();
 	dropdown();
-	$('#customForm').show();
-	$('#exerciseList').hide();
+	$('#exerciseList').show();
+	$('#FilterName').hide();
+	$('#customForm').hide();
 }
 
 // Handles search button
@@ -76,13 +77,74 @@ function alphabetizeZtoA() {
 function createFilter() {
 	$('#customForm').show();
 	$('#exerciseList').hide();
+	newFilter(name);
 
+}
+
+function submitCustomFilter() {
+	var oldName = document.getElementById('customFilterName').name;
+	var newName = document.getElementById('customFilterName').value;
+	if(getCustomFilter(oldName) == -1) {
+		console.log("cannot find filter by oldname");
+		$('#customForm').hide();
+		$('#exerciseList').show();
+		return;
+	}
+	if(oldName != newName) {
+		if(getCustomFilter(newName) != -1) {
+			alert("cannot have same name as another filter");
+			return;
+		} else {
+			setNameCustomFilter(newName, oldName);
+		}
+	}
+
+	document.getElementById('customFilterName').name = newName;
+
+	$('#customForm').hide();
+	$('#exerciseList').show();
 }
 
 function newFilter(name) {
 	createCustomFilter(name);
+
 }
 
 function toggleExercise(name, exercise) {
-	editCustomFilter(name, exercise);
+	if(editCustomFilter(name, exercise)){
+		$('#'+exercise).css('background', '#AAA');
+		console.log("added changed background");
+	} else {
+		$('#'+exercise).css('background', '#FFF');
+		console.log("spliced changed background");
+	}
+}
+
+function populateCustomFilter(nameOfFilter, exercise) {
+	var iterOfFilter = getCustomFilter(nameOfFilter);
+	if( iterOfFilter != -1) {
+		if(containsElement(iterOfFilter, exercise)){
+			$('#'+exercise).css('background', '#AAA');
+		} else {
+			$('#'+exercise).css('background', '#FFF');
+		}
+	} else {
+		console.log('No filter by this name');
+	}
+}
+
+function addCustomWorkouts(){
+	var userData = getUserData();
+	for(var i = 0; i < userData.customWorkoutFilters.length; i++){
+		var name = userData.customWorkoutFilters[i][0];
+		var html = '<li class="filter">' +
+						'<button class="btn dropdown-item" type="button" onclick="'+populateCustomFilter(name)+'">'+name+
+						'</button>' +
+					'</li> ';
+
+	}
+
+
+
+
 }

@@ -69,7 +69,7 @@
 }
 
 .thumbnaimCustom {
-  display: block;
+  display: inline-block;
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.428571429;
@@ -77,6 +77,12 @@
   border: 1px solid #dddddd;
   border-radius: 4px;
 
+}
+
+.submitCustomFilterBtn {
+	width: 100%;
+	height: 50px;
+	display: inline-block;
 }
 
 .customFilterInput {
@@ -95,3 +101,7 @@
 	padding-bottom: 15px;
 	text-align: center;
 }
+
+
+
+
