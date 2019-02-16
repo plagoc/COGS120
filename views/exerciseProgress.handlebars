@@ -31,11 +31,13 @@
 
 	<div class="exerciseProgressContent">
 		<div class="exerciseProgressTabs">
-			<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">{{name}}</button>
+			<button class="tablinks" onclick="changeTab(event, 'infoTab')">{{name}}</button>
+			<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">Record</button>
 			<button class="tablinks" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
+
 		</div>
 
-		<div id="exerciseTab" class="tabcontent" onload="initializePage()">
+		<div id="infoTab" class="tabcontent">
 			<div class="howToContainer">
 				<div class="howToTitle">
 					<h1>How To:</h1>
@@ -45,6 +47,9 @@
 				</div>
 			</div>
 
+		</div>
+
+		<div id="exerciseTab" class="tabcontent" onload="initializePage()">
 			<div class="statsContainer">
 				<table class="setsTable">
 					<tr class=setsTableTitle>

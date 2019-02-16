@@ -1,12 +1,30 @@
+/*
+ * Designed to store workout data
+ * 
+ * Data Structure:     
+ * WumboJumbo.JSON = { name, history } 
+ * 		 			
+ * name: name of workout
+ * history[]: array of history data type, each history contains one workout record
+ * 
+ * history[i] = { date, sets, reps, weigth }
+ * 
+ * date: date of recorded workout
+ * sets: number of sets recorded
+ * reps[]: array contains reps in order from 1-#ofSets
+ * weight[]: array contains weight in order from 1-#ofSets. (Notice this is singular... My b)
+ */
+
+
 function setUpExerciseDict(nameOfExercise){
 	var list = [];
 	var exerciseDict = {
 		test: "stored",
 		name: nameOfExercise,
-		history: [{date: '12/1/2011', sets: 3, reps: [5,4,6], weight:[100, 120, 140]}]
+		history: []
 	};
 		return exerciseDict;
-	}
+}
 
 function storeExerciseData(name) {
 	console.log("storeExerciseDict");
@@ -19,7 +37,7 @@ function storeExerciseData(name) {
   			  storeExerciseDict(name, exerciseDict);
   		} 
   			  console.log("storedata");
-	  		  var exerciseDict = getExerciseDict(name)
+	  		  var exerciseDict = getExerciseDict(name);
 	  		  exerciseDict.history.push( newHistoryEntry() );
 
 	 //printExercise(name);		
