@@ -6,7 +6,8 @@
 }
 .containerExerciseProgress {
   margin: 10 auto;
-  max-width: 850px;
+  //max-width: 850px;
+  border: none;
 }
 
 .exerciseProgressContent {
@@ -69,8 +70,16 @@
   font-size: 20px;
 }
 
-.setsTable th {
-  text-align: center;
+.setsTable {
+  text-align: left;
+}
+
+.emptyTh{
+  width: 30%;
+}
+
+.titleTh{
+  width: 35%;
 }
 
 #setTitleID {
@@ -118,7 +127,6 @@
 
 .button {
   background-color: lightblue;
-  border: 1px solid #ccc;
   text-align: center;
   border: none;
   outline: none;
@@ -154,6 +162,10 @@
   padding-top: 10px; 
   padding-bottom: 10px;
 
+}
+
+.navbarOffset{
+  height: 100px;
 }
 
 #settingOffset {

@@ -45,6 +45,10 @@
 				<div class="videoContainer">
 					<iframe src="{{videoURL}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen></iframe>
 				</div>
+				<div class="ExerciseInfo">
+					<h2>Exercise Tips: </h2>
+					<p>{{text}}</p>
+				</div>
 			</div>
 
 		</div>
@@ -53,9 +57,9 @@
 			<div class="statsContainer">
 				<table class="setsTable">
 					<tr class=setsTableTitle>
-						<th></th>
-						<th> Weights </th>
-						<th> Reps </th>
+						<th id="emptyTh"></th>
+						<th class="titleTh"> Weights </th>
+						<th class="titleTh"> Reps </th>
 					</tr>
 
 				</table>
@@ -65,7 +69,6 @@
 				<div class="buttonContainer">
 					<button class="button" onclick="addSet()"> + </button>
 					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}'); removeRows();">Submit</button>
-
 				</div>
 
 			</div>
@@ -82,12 +85,10 @@
 				
 			</div>
 		</div>
-
+		<div class="navbarOffset"></div>
 	</div>
 
 	
-
-	<hr>
 	<!-- Floor Navbar -->
 	<div class="containerEx">
 		<div class="navbarBottom">
