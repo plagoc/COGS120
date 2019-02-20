@@ -1,0 +1,26 @@
+.dateProgressTitle {
+	color: #336db3;
+	font-weight: bolder;
+}
+
+.weightRepsTable {
+
+}
+
+.rowTitle {
+
+}
+
+.setTitle, .weightTitle, .repsTitle {
+	color: #336db3;
+	padding-left: 10px;
+}
+
+.setTitle{
+	width: 30%;
+}
+
+.progressWeight, .progressSet, .progressReps {
+	color: white;
+	padding-left: 20px;
+}

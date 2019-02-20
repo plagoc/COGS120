@@ -5,8 +5,7 @@
 /* Style the tab */
 .exerciseProgressTabs {
   overflow: hidden;
-  //border: 1px solid #ccc;
-  background-color: lightblue;
+  background-color: #6da2e6;
   font-size: 20px;
   position: fixed;
   top: 0;
@@ -27,19 +26,17 @@
   padding: 14px 16px;
   transition: 0.3s;
   width: 33.3333%;
-  //border:2px solid grey;
 }
 
 /* Change background color of buttons on hover */
 .exerciseProgressTabs button:hover {
-  /*background-color: #4da6ff;
-  */
+  background-color: #336db3;
 }
 
 /* Create an active/current tablink class */
 .exerciseProgressTabs button.active {
-  /*background-color: #80bfff;
-  */
+  background-color: #336db3;
+  border-bottom: 5px solid white;
 }
 
 /* Style the tab content */
@@ -47,4 +44,9 @@
   display: none;
   padding: 6px 12px;
   border-top: none;
+}
+
+button {
+  border: none;
+  color: white;
 }

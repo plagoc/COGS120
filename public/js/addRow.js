@@ -15,7 +15,7 @@ function addSet(){
       myTd.setAttribute('class','titleRowTd');
 
 
-      myTitle = document.createElement('h2');
+      myTitle = document.createElement('h3');
       myTitle.innerHTML = "Set " + setNum;
       myTitle.id = "setTitleID";
       myTd.appendChild(myTitle);
@@ -39,7 +39,7 @@ function removeRows() {
     while(Parent.hasChildNodes()) {
       Parent.removeChild(Parent.firstChild);
     }
-    setNum  =0;
+    setNum =0;
     addSet();
 }
 
