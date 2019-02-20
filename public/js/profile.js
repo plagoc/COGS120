@@ -1,3 +1,5 @@
+// Used for both settings and profile
+
 'use strict'
 
 $(document).ready(function() {
@@ -10,6 +12,7 @@ function initializePage() {
 	setGoal();
 	setMeasurement();
 	setGraph();
+	// getHelp();
 }
 
 function setMeasurement() {
@@ -65,12 +68,6 @@ function toggleLine() {
 	storeGraphType('line');
 }
 
-
-
-
-// TODO: Switch placement of confirm and cancel
-
-
 // Handle user clicking edit button
 function edit() {
 	// Check if confirm button is showing already, then switch text to Cancel
@@ -108,3 +105,40 @@ function confirm() {
 	$("#confirm").hide();
 	updateProfleInfo(name, goal);
 }
+
+
+// Settings functionality
+function getHelp(helpInfo) {
+	var helpText;
+	if(helpInfo === "weightInfo") {
+		helpText = '"Weight" refers to how your weights will be recorded in the Exercise Page. You can choose between having the weights shown in kilograms or pounds.';
+	} else if(helpInfo === "graphInfo") {
+		helpText = '"Graph" refers to how your progress graph will be presented in the Progress Page. You can choose between having it shown as a line graph, or as a bar graph.';
+	}
+
+	$(".trigger_popup").click(function() {
+		$('.hover_bg').show();
+		$('p#info').html(helpText);
+	});
+	$('.hover_bg').click(function() {
+		$('.hover_bg').hide();
+	});
+	$('.popupCloseButton').click(function() {
+		$('.hover_bg').hide();
+	});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

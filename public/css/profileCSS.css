@@ -1,0 +1,101 @@
+/* Includes profile and settings CSS */
+
+.jumbotron h1 {
+	text-align: center
+}
+
+div .setting {
+	text-align: center;
+}
+
+.edit {
+	text-align: center;
+	margin: auto;
+}
+
+.confirm {
+	text-align: center;
+	margin: auto;
+}
+
+.profile {
+	text-align: center;
+	margin: 10px;
+	/*padding: 10px;*/
+	padding: 10px;
+}
+
+input.inputText {
+	width: 50%;
+	margin: auto;
+}
+
+#lbsOptions, #kgOptions, #barOptions, #lineOptions, #name, #goal {
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+#helpIcon {
+	margin-left: 10px;
+}
+
+
+
+/* Popup box BEGIN */
+.hover_bg{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bg .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bg > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 100px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+.trigger_popup {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */

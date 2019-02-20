@@ -6,7 +6,7 @@
 
 	<!-- userDataStorage.js must come befroe  settings.js-->
 	<script type="text/javascript" src="/js/userDataStorage.js"></script>
-	<script type="text/javascript" src="/js/settings.js"></script>
+	<script type="text/javascript" src="/js/profile.js"></script>
 	
 
 	<meta charset="utf-8">
@@ -14,7 +14,7 @@
 	
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/settingsCSS.css">
+	<link rel="stylesheet" type="text/css" href="/css/profileCSS.css">
 	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
@@ -46,53 +46,19 @@
 		</div>
 		<div class="profile">
 			<button type="button" class="edit btn btn-lg btn-primary" onclick="edit()" id="edit">Edit Profile</button>
-			<button type="button" class="confirm btn btn-lg btn-primary" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>	
+			<button type="button" class="confirm btn btn-lg btn-primary" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>
+
 		</div>
 	</div>	
 
-	<hr>
 
-	<!-- TODO: Change below to a settings button -> leads to setting page -->
 	<div class="profile">
-		<a class="btn btn-secondary" href="#" role="button">Edit Settings</a>
+		<a id="editSettingsButton" class="btn btn-md btn-primary" href="/settings/" role="button">Edit Settings</a>
 	</div>
 
-
-	<!-- Switches -->
-	<!-- <div class="container">
-		<div class="row">
-			<div class="col-lg-6 setting">
-				<h1 class="display-1">Weight</h1>
-			</div>
-			<div class="col-lg-6 setting">
-				<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
-
-					<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
-						<input type="radio" autocomplete="off" name="options"  > Pounds
-					</label>
-					<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
-						<input type="radio" name="options" autocomplete="off" > Kilograms
-					</label>
-
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6 setting">
-				<h1 class="display-1">Graph</h1>
-			</div>
-			<div class="col-lg-6 setting">
-				<div class="btn-group btn-group-toggle" data-toggle="buttons">
-					<label class="btn btn-secondary active" id="barOptions" onclick="toggleBar()">
-						<input type="radio" autocomplete="off" name="options"> Bar
-					</label>
-					<label class="btn btn-secondary" id="lineOptions" onclick="toggleLine()">
-						<input type="radio" name="options" autocomplete="off" > Line
-					</label>
-				</div>
-			</div>
-		</div>
-	</div> -->
+	<div class="profile">
+		<a href="/" role="button">Sign Out</a>
+	</div>
  	
 
 	<!-- Floor Navbar -->

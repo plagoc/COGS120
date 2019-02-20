@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Settings Page</title>	
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/profileCSS.css">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/profile.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Settings</h1>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 setting">
+				<u><h4 class="profile" id="weightHeader">Weight<i id="helpIcon" class="trigger_popup fas fa-info-circle" onclick="getHelp('weightInfo')"></i></h4></u>
+			</div>
+			
+			<div class="hover_bg"> <!-- Div class shows the background when pop up is displayed; from https://html-online.com/articles/simple-popup-box/ -->
+				<span class="helper"></span>
+				<div>
+					<div class="popupCloseButton">Close</div>
+					<p id="info"></p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 setting">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
+
+					<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
+						<input type="radio" autocomplete="off" name="options"  > Pounds
+					</label>
+					<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
+						<input type="radio" name="options" autocomplete="off" > Kilograms
+					</label>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 setting">
+				<u><h4 class="profile" id="graphHeader">Graph<i id="helpIcon" class="trigger_popup fas fa-info-circle" onclick="getHelp('graphInfo')"></i></h4></u>
+			</div>
+
+			<div class="hover_bg"> <!-- Div class shows the background when pop up is displayed; from https://html-online.com/articles/simple-popup-box/ -->
+				<span class="helper"></span>
+				<div>
+					<div class="popupCloseButton">Close</div>
+					<p id="info"></p>
+				</div>
+			</div>
+
+			<div class="col-lg-6 setting">
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-secondary active" id="barOptions" onclick="toggleBar()">
+						<input type="radio" autocomplete="off" name="options"> Bar
+					</label>
+					<label class="btn btn-secondary" id="lineOptions" onclick="toggleLine()">
+						<input type="radio" name="options" autocomplete="off" > Line
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{> navbar}}
+</body>
+</html>
