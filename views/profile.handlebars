@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-	<title>Settings Page</title>
+	<title>Profile Page</title>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 
@@ -21,17 +21,12 @@
 <body>
 	<div class="container-fluid">
 		<div class="jumbotron">
-			<h1>Settings</h1>
+			<h1>My Profile</h1>
 		</div>
 	</div>
 
 	<!-- Profile -->
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="profile">My Profile</h1>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-lg-12 profile">
 				<img src="/images/lorempixel.people.2.jpeg" alt="lorem pixel img" class="img-thumbnail img-fluid">
@@ -59,7 +54,7 @@
 
 	<!-- TODO: Change below to a settings button -> leads to setting page -->
 	<div class="profile">
-		<h2 class="display-1"><button type='button' class='btn btn-secondary'>Change Settings</button></h2>
+		<a class="btn btn-secondary" href="#" role="button">Edit Settings</a>
 	</div>
 
 
@@ -101,7 +96,6 @@
  	
 
 	<!-- Floor Navbar -->
- 	<hr>
 	{{> navbar}}
 </body>
 </html>

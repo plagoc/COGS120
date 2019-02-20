@@ -8,7 +8,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
-var settings = require('./routes/settings');
+var profile = require('./routes/profile');
 var help = require('./routes/help');
 var friends = require('./routes/friends');
 var exerciseProgress = require('./routes/exerciseProgress');
@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/index', index.view);
-app.get('/settings', settings.view);
+app.get('/profile', profile.view);
 app.get('/help', help.view);
 app.get('/friends', friends.view);
 app.get('/exerciseProgress/:name', exerciseProgress.viewExercise);

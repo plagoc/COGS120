@@ -11,6 +11,7 @@ function initializePage() {
 	$('#exerciseList').show();
 	$('#FilterName').hide();
 	$('#customForm').hide();
+	// $('#homeNav').replaceWith("<h1>FitY'all!</h1>");
 }
 
 // Handles search button
