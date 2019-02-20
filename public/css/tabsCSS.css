@@ -5,7 +5,7 @@
 /* Style the tab */
 .exerciseProgressTabs {
   overflow: hidden;
-  border: 1px solid #ccc;
+  //border: 1px solid #ccc;
   background-color: lightblue;
   font-size: 20px;
   position: fixed;
@@ -27,7 +27,7 @@
   padding: 14px 16px;
   transition: 0.3s;
   width: 33.3333%;
-  border:2px solid grey;
+  //border:2px solid grey;
 }
 
 /* Change background color of buttons on hover */
