@@ -111,9 +111,9 @@ function confirm() {
 function getHelp(helpInfo) {
 	var helpText;
 	if(helpInfo === "weightInfo") {
-		helpText = '"Weight" refers to how your weights will be recorded in the Exercise Page. You can choose between having the weights shown in kilograms or pounds.';
+		helpText = '"Weight" refers to how your weights will be recorded in the Record Page after selecting a workout. You can choose between having the weights shown in kilograms or pounds.';
 	} else if(helpInfo === "graphInfo") {
-		helpText = '"Graph" refers to how your progress graph will be presented in the Progress Page. You can choose between having it shown as a line graph, or as a bar graph.';
+		helpText = '"Graph" refers to how your progress graph will be presented in the Progress Page after selecting a workout. You can choose between having it shown as a line graph, or as a bar graph.';
 	}
 
 	$(".trigger_popup").click(function() {
