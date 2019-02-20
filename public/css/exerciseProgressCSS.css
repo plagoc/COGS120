@@ -140,35 +140,4 @@
   background-color: lightgreen;
 }
 
-.containerEx {
-  width: 100%;
-}
-
-.navbarBottom {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-}
-
-.navbarBottom a{
-  width: 33%;
-  float: left;
-  display: block;
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-top: 10px; 
-  padding-bottom: 10px;
-
-}
-
-.navbarOffset{
-  height: 100px;
-}
-
-#settingOffset {
-  padding-left: 15%;
-}
 
