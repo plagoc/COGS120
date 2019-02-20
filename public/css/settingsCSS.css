@@ -8,8 +8,20 @@ div .setting {
 
 .edit {
 	text-align: center;
+	margin: auto;
+}
+
+.confirm {
+	text-align: center;
+	margin: auto;
 }
 
 .profile {
 	text-align: center;
+	margin-top: 15px;
+}
+
+input.inputText {
+	width: 50%;
+	margin: auto;
 }

@@ -19,42 +19,52 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="jumbotron">
 			<h1>Settings</h1>
 		</div>
 	</div>
 
-	<!-- TODO: Create Picture profile -->
-	<div class="container">
-		<h1 class="display-1">My Profile</h1>
+	<!-- Profile -->
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 profile">
-				<img src="/images/lorempixel.people.2.jpeg" alt="lorem pixel img" class="thumbnail">
-				<div class="container">
-					<button type="button" class="edit btn btn-lg btn-primary" onclick="edit()" id="edit">Edit</button>
-					<button type="button" class="confirm btn btn-lg btn-primary" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="col-lg-6">
-					<h1 class="display-1">Name:</h1>
-					<h1 class="display-1">Goal:</h1>
-				</div>
-				<div class="col-lg-6">
-					<h1 class="display-1" id="name" onload="setName()"></h1>
-					<h1 class="display-1" id="goal" onload="setGoal()"></h1>
-				</div>
+			<div class="col-lg-12">
+				<h1 class="profile">My Profile</h1>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-lg-12 profile">
+				<img src="/images/lorempixel.people.2.jpeg" alt="lorem pixel img" class="img-thumbnail img-fluid">
+			</div>
+		</div>
+		<div class="row">
+			<u><h4 class="profile">Name</h4></u>
+			<div class="col-lg-12">
+				<h1 class="profile" id="name" onload="setName()"></h1>
+			</div>
+		</div>
+		<div class="row">
+			<u><h4 class="profile">Goal</h4></u>
+			<div class="col-lg-12">
+				<h1 class="profile" id="goal" onload="setGoal()"></h1>
+			</div>
+		</div>
+		<div class="profile">
+			<button type="button" class="edit btn btn-lg btn-primary" onclick="edit()" id="edit">Edit Profile</button>
+			<button type="button" class="confirm btn btn-lg btn-primary" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>	
+		</div>
+	</div>	
+
+	<hr>
+
+	<!-- TODO: Change below to a settings button -> leads to setting page -->
+	<div class="profile">
+		<h2 class="display-1"><button type='button' class='btn btn-secondary'>Change Settings</button></h2>
 	</div>
 
-	<!-- TODO: Create Name, Goal, and Display Buttons -->
-	
 
-	<!-- TODO: Align switches with h1 -->
 	<!-- Switches -->
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-lg-6 setting">
 				<h1 class="display-1">Weight</h1>
@@ -87,17 +97,18 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</div> -->
+ 	
 
 	<!-- Floor Navbar -->
+ 	<hr>
 	<div class="container">
 		<div class="row navbar">
 			<!-- <div class="col-lg-4"> -->
 				<a href="/help/"><i class="fas fa-question fa-4x"></i></a>
 			<!-- </div> -->
 			<!-- <div class="col-lg-4"> -->
-				<a href="/"><i class="fas fa-home fa-4x"></i></a>
+				<a href="/index/"><i class="fas fa-home fa-4x"></i></a>
 			<!-- </div> -->
 			<!-- <div class="col-lg-4"> -->
 				<a href="/settings/"><i class="fas fa-cog fa-4x"></i></a>

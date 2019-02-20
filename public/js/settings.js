@@ -79,13 +79,11 @@ function edit() {
 		console.log("if!");
 	} else {
 		var name = getName();
-		$("#name").replaceWith('<div class="input-group mb-3">'+
-							'<input type="text" id="name" class="form-control" value=' +' " '+name+' " ' + ' aria-label="Name"'+
-							'aria-describedby="basic-addon1"></div>');
+		$("#name").replaceWith('<input type="text" id="name" class="form-control inputText" value=' +' " '+name+' " ' + ' aria-label="Name"'+
+							'aria-describedby="basic-addon1">');
 		var goal = getGoal();
-		$("#goal").replaceWith('<div class="input-group mb-3">'+
-							'<input type="text" id="goal" class="form-control" value=' +' " '+goal+' " ' + ' aria-label="Name"'+
-							'aria-describedby="basic-addon1"></div>');
+		$("#goal").replaceWith('<input type="text" id="goal" class="form-control inputText" value=' +' " '+goal+' " ' + ' aria-label="Name"'+
+							'aria-describedby="basic-addon1">');
 
 		$("#confirm").show();	
 	}
@@ -98,13 +96,13 @@ function confirm() {
 	if(name.length  == 0) {
 		name = getName();
 	}	
-	$("#name").replaceWith('<h1 class="display-1" id="name">'+name+'</h1>');
+	$("#name").replaceWith('<h1 class="profile" id="name">'+name+'</h1>');
 
 	var goal = $("#goal").val();
 	if(goal.length  == 0) {
 		goal = getGoal();
 	}	
-	$("#goal").replaceWith('<h1 class="display-1" id="goal">'+goal+'</h1>');
+	$("#goal").replaceWith('<h1 class="profile" id="goal">'+goal+'</h1>');
 
 	$("#edit").show();
 	$("#confirm").hide();
