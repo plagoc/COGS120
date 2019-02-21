@@ -8,11 +8,15 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("JS Connected!");
+	setPic(); 
 	setName();
 	setGoal();
 	setMeasurement();
 	setGraph();
-	// getHelp();
+}
+
+function setPic() {
+	$("#profileImg").attr('src', getProfilePic());
 }
 
 function setMeasurement() {
@@ -36,7 +40,7 @@ function setGraph() {
 }
 
 function setName() {
-	document.getElementById("name").innerHTML = getName(); 
+	$('#name').text(getName());
 }
 function setGoal() {
 	document.getElementById("goal").innerHTML = getGoal();   
@@ -103,7 +107,7 @@ function confirm() {
 
 	$("#edit").show();
 	$("#confirm").hide();
-	updateProfleInfo(name, goal);
+	updateProfleInfo(name, goal, getProfilePic());
 }
 
 
@@ -129,7 +133,14 @@ function getHelp(helpInfo) {
 }
 
 
-
+function logout() {
+	// FB.logout(function(response) {
+		// console.log("logging out");
+	// });
+	// For now, just clear userData
+	updateProfleInfo("Johnny", "Work out", '/images/lorempixel.people.2.jpeg');
+	window.location.href = "/";
+}
 
 
 

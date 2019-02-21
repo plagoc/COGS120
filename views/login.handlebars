@@ -5,7 +5,8 @@
 	<script type="text/javascript" src="/js/index.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/js/bootstrap.js"></script>
-	<meta charset="utf-8">
+  <script src="/js/facebook.js"></script>
+  <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
@@ -14,36 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
 	<link rel="stylesheet" type="text/css" href="/css/indexCSS.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  {{> facebook}}
 </head>
-<!-- <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Login</h1>
-		</div>
-	</div>
-	 
-	 <form>
-      <fieldset>
-		 <p>
-          <label>Username/Email: </label>
-          <input type = "text"
-                 id = "myText"
-                 value = "" />
-        </p>
-        <p>
-          <label>Password: </label>
-          <input type = "password"
-                  id = "myPwd"
-                  value = "" />
-        </p>
-      </fieldset>
-     </form>
-
-
-	
- TODO: Add button for logging in 
-</body> -->
-
 <body>
     <div id="login">
         <div class="container">
@@ -63,12 +37,20 @@
                             <div class="form-group">
                                 <input type="button" name="submit" class="btn btn-info btn-md" value="submit" onclick="location.href='/index';"/>
                             </div>
+                            <p class="facebookLogin">
+                              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" ></fb:login-button>
+                            </p>
                         </form>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
+
+    
+
+  
 </body>
 
 </html>
