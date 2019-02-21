@@ -33,6 +33,12 @@ function changeUser(response) {
   var userData = getUserData();
   var profileImg = response.picture.data.url;
   var name = response.name;
+  if(name == null) {
+    name = 'Johnny';
+  }
+  if(profilePic == null) {
+    profilePic = '/images/lorempixel.abstract.1.jpeg';
+  }
   userData.profilePic = profileImg;
   userData.name = name;
   storeUserData(userData);
