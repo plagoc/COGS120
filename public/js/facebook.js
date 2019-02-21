@@ -30,9 +30,8 @@ function storeUserData(obj) {
 
 //Add this callback at bottom of facebook.js and add the required functionality in it 
 function changeUser(response) {
-  var userData = getUserData();
+  var userData = setUpUserData();
   var profileImg = response.picture.data.url;
-  console.log(userData);
   var name = response.name;
   if(name == null) {
     name = 'Johnny';
@@ -45,6 +44,6 @@ function changeUser(response) {
   userData.name = name;
   storeUserData(userData);
   console.log(getUserData());
-  // window.location.href = '/index';
+  window.location.href = '/index';
 
 }
