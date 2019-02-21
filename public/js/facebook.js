@@ -14,11 +14,29 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-         FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+        FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
 }
 
+function getUserData() {
+  return JSON.parse(localStorage.getItem( 'userData' ));    
+}
+
+function storeUserData(obj) {
+    localStorage.setItem( 'userData', JSON.stringify(obj) );
+}
+
+
+
 //Add this callback at bottom of facebook.js and add the required functionality in it 
 function changeUser(response) {
-  //Add code to change name and image in profile
+  var userData = getUserData();
+  var profileImg = response.picture.data.url;
+  var name = response.name;
+  userData.profilePic = profileImg;
+  userData.name = name;
+  storeUserData(userData);
+  console.log(getUserData());
+  window.location.href = '/index';
+
 }

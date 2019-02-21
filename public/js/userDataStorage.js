@@ -17,7 +17,7 @@
  	var userData = {
 		name: 'Johnny AppleSeed',
 		goal: 'Plant Lots Of Apples!!',
-		profilePic: '',
+		profilePic: '/images/lorempixel.people.2.jpeg',
 		appMeasurement: 'kg',
 		graphType: 'line',
 		customWorkoutFilters: [] 
@@ -152,10 +152,11 @@ function containsElement(iterOfFilter, exercise) {
 	return false;
 }
 
-function updateProfleInfo(name, goal) {
+function updateProfleInfo(name, goal, pic) {
 	if (!startup()) return false;
 	var userData = getUserData();
 	userData.name = name;
+	userData.profilePic = pic;
 	userData.goal = goal;
 	storeUserData(userData);
 }
@@ -172,6 +173,11 @@ function storeGraphType( graphType ) {
 	var userData = getUserData();
 	userData.graphType = graphType;
 	storeUserData(userData);
+}
+
+function getProfilePic() {
+	if(!startup()) return false;
+	return getUserData().profilePic;
 }
 
 function getName() {
