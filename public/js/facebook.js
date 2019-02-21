@@ -36,8 +36,8 @@ function changeUser(response) {
   if(name == null) {
     name = 'Johnny';
   }
-  if(profilePic == null) {
-    profilePic = '/images/lorempixel.abstract.1.jpeg';
+  if(profileImg == null) {
+    profileImg = '/images/lorempixel.abstract.1.jpeg';
   }
   userData.profilePic = profileImg;
   userData.name = name;
