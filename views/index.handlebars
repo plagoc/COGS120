@@ -37,11 +37,15 @@
   				Filter Workouts
   				<span class="caret"></span>
   			</button>
-  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter" onload="addCustomWorkouts()">
+  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+  			<!--<ul class="dropdown-menu" aria-labelledby="dropdownFilter" onload="addCustomWorkouts()">-->
+
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeAtoZ()">Alphabetical (A-Z)</button></li> 
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeZtoA()">Alphabetical (Z-A)</button></li> 
     			<div id="addCustomWorkoutsHere"></div>
+    			<!--
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="createFilter()">Create Filter</button></li> 
+    			-->
   			</ul>
 		</div> 
 	</div>
@@ -58,6 +62,7 @@
 			</div>
 			{{/each}}
 		</div>
+		<!--
 		<div class="customFilterConatiner" id="FilterName">
 			<h3 class="filterTitle"> Filter Title: </h3>
 			<input type="text" name="custom" class="customFilterInput" placeholder="Custom Filter" id="customFilterName">
@@ -67,12 +72,12 @@
 			{{#each exercises}}
 			<div class='customFormDiv' id="{{id}}">
 				<button class="thumbnaimCustom" id='{{name}}' onclick="toggleExercise('custom','{{name}}')">
-					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
 					<h3 class="display-4" id="name">{{name}}</h3>
 				</button>
 			</div>
 			{{/each}}
 		</div>
+		-->
 	</div>
 
 	<!-- Floor Navbar -->

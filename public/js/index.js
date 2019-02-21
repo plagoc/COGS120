@@ -8,9 +8,9 @@ function initializePage() {
 	console.log("JS connected!");
 	search();
 	dropdown();
-	$('#exerciseList').show();
-	$('#FilterName').hide();
-	$('#customForm').hide();
+	//$('#exerciseList').show();
+	//$('#FilterName').hide();
+	//$('#customForm').hide();
 	// $('#homeNav').replaceWith("<h1>FitY'all!</h1>");
 }
 
