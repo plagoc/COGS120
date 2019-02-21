@@ -39,10 +39,11 @@ function changeUser(response) {
   if(profileImg == null) {
     profileImg = '/images/lorempixel.abstract.1.jpeg';
   }
+  console.log(profileImg);
   userData.profilePic = profileImg;
   userData.name = name;
   storeUserData(userData);
   console.log(getUserData());
-  window.location.href = '/index';
+  // window.location.href = '/index';
 
 }
