@@ -32,6 +32,7 @@ function storeUserData(obj) {
 function changeUser(response) {
   var userData = getUserData();
   var profileImg = response.picture.data.url;
+  console.log(userData);
   var name = response.name;
   if(name == null) {
     name = 'Johnny';
