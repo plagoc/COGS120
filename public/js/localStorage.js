@@ -202,7 +202,7 @@ function populateProgressPage(name) {
 }
 
 function processWeight(weight) {
-	if(getAppMeasurement == 'kg') {
+	if(getAppMeasurement() == 'kg') {
 		return (weight * 2.204);
 	} else {
 		return (weight);
@@ -210,13 +210,12 @@ function processWeight(weight) {
 }
 
 function updateWeightInfo(weight) {
-	if(getAppMeasurement == 'lbs') {
+	if(getAppMeasurement() == 'lbs') {
 		return (Math.round(weight) + ' lbs');
 	} else {
 		return (Math.round(weight * 0.453592) + ' kg');
 	}
 }
-
 
 function getExerciseDict(exerciseName) {
 	  return JSON.parse(localStorage.getItem( exerciseName ));		
