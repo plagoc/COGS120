@@ -102,6 +102,11 @@
 	text-align: center;
 }
 
+#dropdownFilter, #searchbar-submit {
+  background-color: #6da2e6;
+  color: white;
+  border: 2px solid #336db3;
+}
 
 
 
