@@ -26,7 +26,18 @@ function storeUserData(obj) {
     localStorage.setItem( 'userData', JSON.stringify(obj) );
 }
 
-
+function setUpUserData() {
+  var userData = {
+    name: 'Johnny AppleSeed',
+    goal: 'Plant Lots Of Apples!!',
+    profilePic: '/images/lorempixel.people.2.jpeg',
+    appMeasurement: 'kg',
+    graphType: 'line',
+    customWorkoutFilters: [] 
+  }
+  
+  return userData;
+}
 
 //Add this callback at bottom of facebook.js and add the required functionality in it 
 function changeUser(response) {
