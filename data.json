@@ -4,43 +4,60 @@
 			"name": "Pull-Ups",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/yLXn2OtQmxo",
-			"text": "Get into the hanging position and grab the pull up bar. Keep your palms facing away from you and pull your body upward. Keep pulling until your chin is close to the bar, pause for a second, and then lower your body."
+			"text": "Get into the hanging position and grab the pull up bar. Keep your palms facing away from you and pull your body upward. Keep pulling until your chin is close to the bar, pause for a second, and then lower your body.",
+			"numReps": "Medium Reps: 8-10",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
 		},
 		{
 			"name": "Bench",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/gRVjAtPip0Y",
-			"text": "First, lie on the bench with your eyes under the bar.Grab the bar with a medium grip-width (thumbs around the bar!) and then unrack the bar by straightening your arms. Lower the bar to your mid-chest and press the bar back up until your arms are straight. Hold the weight for a second at the top, with straight arms. Breathe. Then take a big breath, hold it, and lower the bar again. Keep your butt on the bench when you press it back up."
+			"text": "First, lie on the bench with your eyes under the bar.Grab the bar with a medium grip-width (thumbs around the bar!) and then unrack the bar by straightening your arms. Lower the bar to your mid-chest and press the bar back up until your arms are straight. Hold the weight for a second at the top, with straight arms. Breathe. Then take a big breath, hold it, and lower the bar again. Keep your butt on the bench when you press it back up.",
+			"numReps": "Low Reps: 4-6",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
 		},
 		{
 			"name": "Deadlifts",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/hCDzSR6bW10",
-			"text": "Stand with your mid-foot under the barbell.  Next, bend over and grab the bar with a shoulder-width grip. Bending your knees until your shins touch the bar, lift your chest up and straighten your lower back. Take a big breath, hold it, and stand up with the weight. Holding the weight for a second at the top, with locked hips and knees then release the weight to the floor by moving your hips back and bending your knees."
+			"text": "Stand with your mid-foot under the barbell.  Next, bend over and grab the bar with a shoulder-width grip. Bending your knees until your shins touch the bar, lift your chest up and straighten your lower back. Take a big breath, hold it, and stand up with the weight. Holding the weight for a second at the top, with locked hips and knees then release the weight to the floor by moving your hips back and bending your knees.",
+			"numReps": "Low Reps: 4-6",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
 		},
 		{
 			"name": "Squats",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/t2b8UdqmlFs",
-			"text": "Stand with the bar on your upper-back, and your feet shoulder-width apart. Next, squat down by pushing your knees to the side while moving hips back. “Break parallel” by squatting down until your hips are lower than your knees. Squat back up while keeping your knees out and chest up. Stand with your hips and knees locked at the top. Hold the weight for a second at the top. Breathe. Then take a big breath, hold it and squat your next rep."
+			"text": "Stand with the bar on your upper-back, and your feet shoulder-width apart. Next, squat down by pushing your knees to the side while moving hips back. “Break parallel” by squatting down until your hips are lower than your knees. Squat back up while keeping your knees out and chest up. Stand with your hips and knees locked at the top. Hold the weight for a second at the top. Breathe. Then take a big breath, hold it and squat your next rep.",
+			"numReps": "Low Reps: 4-6",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
 		},
 		{
 			"name": "Curls",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/QZEqB6wUPxQ",
-			"text": "Stand up straight with a dumbbell in each hand at arm's length. Keep your elbows close to your torso and rotate the palms of your hands until they are facing forward. Now, keeping the upper arms stationary, exhale and curl the weights while contracting your biceps. Continue to raise the weights until your biceps are fully contracted and the dumbbells are at shoulder level. Hold the contracted position for a brief pause as you squeeze your biceps. Then, inhale and slowly begin to lower the dumbbells back to the starting position."
+			"text": "Stand up straight with a dumbbell in each hand at arm's length. Keep your elbows close to your torso and rotate the palms of your hands until they are facing forward. Now, keeping the upper arms stationary, exhale and curl the weights while contracting your biceps. Continue to raise the weights until your biceps are fully contracted and the dumbbells are at shoulder level. Hold the contracted position for a brief pause as you squeeze your biceps. Then, inhale and slowly begin to lower the dumbbells back to the starting position.",
+			"numReps": "Medium Reps: 8-10",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
+
 		},
 		{
 			"name": "Sit-Ups",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/1fbU_MkV7NE",
-			"text": "Lie down on your back. Bend your legs and place feet firmly on the ground to stabilize your lower body. Cross your hands to opposite shoulders or place them behind your ears, without pulling on your neck. Curl your upper body all the way up toward your knees. Exhale as you lift. Slowly, lower yourself down, returning to your starting point. Inhale as you lower."
+			"text": "Lie down on your back. Bend your legs and place feet firmly on the ground to stabilize your lower body. Cross your hands to opposite shoulders or place them behind your ears, without pulling on your neck. Curl your upper body all the way up toward your knees. Exhale as you lift. Slowly, lower yourself down, returning to your starting point. Inhale as you lower.",
+			"numReps": "High Reps: 15-20",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
+
 		},
 		{
 			"name": "Calf-Raises",
 			"id": "exercise",
 			"videoURL": "https://www.youtube.com/embed/gwLzBJYoWlI",
-			"text": "Stand on the edge of a step. Stand tall with your abdominals pulled in, the balls of your feet firmly planted on the step, and your heels hanging over the edge. Rest your hands against a wall or a sturdy object for balance. Raise your heels a few inches above the edge of the step so that you’re on your tiptoes. Hold the position for a moment, and then lower your heels below the platform, feeling a stretch in your calf muscles."
+			"text": "Stand on the edge of a step. Stand tall with your abdominals pulled in, the balls of your feet firmly planted on the step, and your heels hanging over the edge. Rest your hands against a wall or a sturdy object for balance. Raise your heels a few inches above the edge of the step so that you’re on your tiptoes. Hold the position for a moment, and then lower your heels below the platform, feeling a stretch in your calf muscles.",
+			"numReps": "High Reps: 15-20",
+			"tips": "1) This is Tip 1 <br>2) This is Tip 2"
+
 		}
 	]
 }

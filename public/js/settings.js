@@ -9,8 +9,8 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("JS Connected!");
 	setPic(); 
-	setName();
-	setGoal();
+	setMeasurement();
+	setGraph();
 }
 
 function setPic() {

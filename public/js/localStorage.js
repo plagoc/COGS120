@@ -36,6 +36,14 @@ function checkExerciseData(history) {
 			alert('Please enter a valid weight: [1-1000]');
 			return false;
 		} 
+		if( isNaN(history.weight[i]) ) {
+			alert('Please enter a valid weight: [1-1000]');
+			return false;
+		} 
+		if( isNaN(history.reps[i]) ) {
+			alert('Please enter a valid weight: [1-1000]');
+			return false;
+		} 
 	}
 	removeRows();
 	return true;
