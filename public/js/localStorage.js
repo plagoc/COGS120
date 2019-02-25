@@ -162,7 +162,7 @@ function populateProgressPage(name) {
 			var workoutScoreH2 = document.createElement("h2");
 			workoutScoreH2.setAttribute('class','dateProgressTitle');
 			exerciseContainer.appendChild(workoutScoreH2);
-			workoutScoreH2.innerHTML = Math.round(history[i].workoutScore);
+			workoutScoreH2.innerHTML = "Score: " + Math.round(history[i].workoutScore);
 
 			var weightRepsTable = document.createElement("table");
 			weightRepsTable.setAttribute('class','weightRepsTable');
