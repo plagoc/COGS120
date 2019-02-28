@@ -6,6 +6,8 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("JS connected!");
+
+	// FIXME: Below two functions are ONLY for index, so only do the below functions IF on index page
 	search();
 	dropdown();
 	//$('#exerciseList').show();
@@ -16,12 +18,24 @@ function initializePage() {
 
 // Handles search button
 function search() {
+	/*
 	$("#searchbar-submit").on('click', function(e) {
 		e.preventDefault();
 		var text = $("#searchbar").val();
 		var exercises = $("div #exercise").get();
 		searchFilter(exercises, text);
-	})
+	});
+	*/
+	window.setInterval(function() {
+		if($("#searchbar").val() != "") {
+			searchFilter($("div #exercise").get(), $("#searchbar").val());
+		} else { // Nothing in searchbar -> show all exercises
+			for(var i = 0; i < $("div #exercise").get().length; i++) {
+				$("div #exercise").get()[i].style.display = "";
+			}
+		} 
+	}, 100);
+	// searchFilter( $("div #exercise").get(), $("#searchbar").val());
 }
 
 // Loop through all exercises, and hide those who don't match textToFind
