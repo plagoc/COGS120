@@ -165,6 +165,7 @@ function storeMeasurmentType( unitOfMeasurement ) {
 	if (!startup()) return false;
 	var userData = getUserData();
 	userData.appMeasurement = unitOfMeasurement;
+	// Change the weight header in the exerciseProgress Page
 	storeUserData(userData);
 }
 
@@ -197,13 +198,20 @@ function getGraphType() {
 	return getUserData().graphType;
 }
 
+// For exerciseProgressPage
+function initializeExerciseTab() {
+	console.log("initializeExerciseTab");
+	$("#weightHeader").html('<th id="weightHeader" class="titleTh"> Weights (' + getAppMeasurement() + ') </th>');
+}
+
+
 /*
  * THESE FUNCTIONS DO NOT CHECK FOR EXISTANCE OF DATA STRUCTURE
  * ONLY USE WHEN YOU CHECK FOR USERDATA FIRST!!!
  */
 
 function getUserData() {
-	return JSON.parse(localStorage.getItem( 'userData' ));		
+	return JSON.parse(localStorage.getItem( 'userData' ));
 }
 
 function storeUserData(obj) {
