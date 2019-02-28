@@ -27,15 +27,15 @@ function setMeasurement() {
 	}
 }
 
-function setGraph() {
-	if (getGraphType() != false ) {
-		if (getGraphType() == 'bar' ) {
-			document.getElementById("barOptions").click();
-		} else {
-			document.getElementById("lineOptions").click();
-		}
-	}
-}
+// function setGraph() {
+// 	if (getGraphType() != false ) {
+// 		if (getGraphType() == 'bar' ) {
+// 			document.getElementById("barOptions").click();
+// 		} else {
+// 			document.getElementById("lineOptions").click();
+// 		}
+// 	}
+// }
 
 function setName() {
 	$('#name').text(getName());
