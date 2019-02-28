@@ -36,7 +36,7 @@
 		<div class="topNavbar">
 			<div class="exerciseProgressTabs">
 				<button class="tablinks" onclick="changeTab(event, 'infoTab')">{{name}}</button>
-				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab')">Record</button>
+				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab'); initializeExerciseTab();">Record</button>
 				<button class="tablinks" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
 			</div>
 		</div>
@@ -59,12 +59,16 @@
 
 		</div>
 
-		<div id="exerciseTab" class="tabcontent" onload="initializePage()">
+		<div id="exerciseTab" class="tabcontent">
 			<div class="statsContainer">
 				<table class="setsTable">
 					<tr class=setsTableTitle>
 						<th id="emptyTh"></th>
+<<<<<<< HEAD
 						<th class="titleTh" id="weightTitle"> Weight </th>
+=======
+						<th id="weightHeader" class="titleTh"> Weights </th> 
+>>>>>>> 98bea3f34e6ea7305b939868ab1abed39ab656ba
 						<th class="titleTh"> Reps </th>
 					</tr>
 

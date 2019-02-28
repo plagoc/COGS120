@@ -25,6 +25,6 @@ exports.viewExercise = function(req, res){
   		'videoURL': videoURL,
   		'text': text,
   		'numReps': numReps,
-  		'tips': tips,
+  		'tips': tips
   	});
 };
