@@ -72,6 +72,7 @@ function storeExerciseData(name) {
 	 //printExercise(name);		
 	  		  storeExerciseDict(name, exerciseDict);
 	  		  populateProgressPage(name);
+	  		  document.getElementById("progressID").click();
 
   	} else {
   		  // Sorry! No Web Storage support..

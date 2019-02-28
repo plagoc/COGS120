@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>Exercise Page</title>	
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="/css/exerciseProgressCSS.css">
+	<link rel="stylesheet" type="text/css" href="/css/tabsCSS.css">
+	<link rel="stylesheet" type="text/css" href="/css/progressTable.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+
+	<script type="text/javascript" src="/js/userDataStorage.js"></script>
+	<script src="/js/localStorage.js"></script>
+	<script src="/js/tabs.js"></script>
+	<script src="/js/addRow.js"></script>
+	<script type="text/javascript" src="/js/exerciseProgress.js"></script>
+
+
+	
+
+</head>
+
+<div class="containerExerciseProgress" >
+
+	<div class="exerciseProgressContent">
+		<div class="topNavbar">
+			<div class="exerciseProgressTabs">
+				<button class="tablinks" onclick="changeTab(event, 'infoTab')">Info</button>
+				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab'); initializeExerciseTab();">Record</button>
+				<button class="tablinks" id="progressID" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
+			</div>
+			<div class="nameTitle">
+				<h1>{{name}}</h1>
+			</div>
+		</div>
+
+		<div id="infoTab" class="tabcontent">
+			<div class="howToContainer">
+				<div class="videoContainer">
+					<iframe src="{{videoURL}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" scrolling="no" allowfullscreen></iframe>
+				</div>
+				<div class="ExerciseInfo">
+					<h2>Exercise Instructions: </h2>
+					<p>{{text}}</p>
+					<h2>Rep Range: </h2>
+					<p>{{numReps}}</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="exerciseTab" class="tabcontent">
+			<div class="statsContainer">
+				<table class="setsTable">
+					<tr class="setsTableTitle">
+						<th id="emptyTh" class="titleRowTd"></th>
+						<th id="weightHeader" class="titleTh">Weights</th> 
+						<th class="titleTh">Reps</th>
+					</tr>
+
+				</table>
+				<table id="myTable" class="setsTable">
+
+				</table>
+				<div class="buttonContainer">
+					<button class="button" id="addSetButton" onclick="addSet()"> + </button>
+					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}')">Submit</button>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div id="progressTab" class="tabcontent" onload="initializePage()">
+			
+			<div id ="thisOne" class="statsContainer" onload="populateProgressPage('{{name}}')">
+			</div>
+			<div class="graph">
+			</div>
+			<div class="buttonContainer">
+				
+			</div>
+		</div>
+		<div class="navbarOffset"></div>
+	</div>
+
+	
+	{{> navbar}}
+</div>
+
+</html>

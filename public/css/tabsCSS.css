@@ -14,6 +14,9 @@
 }
 
 .topNavbar {
+  height: 100px;
+}
+.topNavbar_A {
   height: 60px;
 }
 
