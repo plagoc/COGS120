@@ -10,10 +10,20 @@ function initializePage() {
 	// FIXME: Below two functions are ONLY for index, so only do the below functions IF on index page
 	search();
 	dropdown();
+
 	//$('#exerciseList').show();
 	//$('#FilterName').hide();
 	//$('#customForm').hide();
 	// $('#homeNav').replaceWith("<h1>FitY'all!</h1>");
+}
+function abTest(name){
+	console.log("hello");
+	if (Math.random() < 0.5) {
+		document.location.href = ("/exerciseProgress_B/"+name);
+		
+	} else {
+  		document.location.href = ("/exerciseProgress_A/"+name);		
+	}
 }
 
 // Handles search button
