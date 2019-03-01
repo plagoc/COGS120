@@ -53,10 +53,9 @@
 	<div class="container" id="exercises">
 		<div class="row" id="exerciseList">
 			{{#each exercises}}
-			<div class='exercise col-lg-4' id="{{id}}" >
-				<a href="/exerciseProgress_B/{{name}}" class="thumbnail" id="exerciseLink">
-					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
-					<h3 class="display-4" id="name">{{name}}</h3>
+			<div class='exercise col-lg-4' id="{{id}}" onClick="abTest('{{name}}')">
+				<a  class="thumbnail" id="exerciseLink" >
+					<h3 class="display-4" id="name" >{{name}}</h3>
 				</a>
 			</div>
 			{{/each}}
