@@ -12,6 +12,8 @@ var profile = require('./routes/profile');
 var help = require('./routes/help');
 var friends = require('./routes/friends');
 var exerciseProgress = require('./routes/exerciseProgress');
+var exerciseProgress_A = require('./routes/exerciseProgress');
+var exerciseProgress_B = require('./routes/exerciseProgress');
 var login = require('./routes/login');
 var settings = require('./routes/settings');
 
@@ -42,6 +44,8 @@ app.get('/profile', profile.view);
 app.get('/help', help.view);
 app.get('/friends', friends.view);
 app.get('/exerciseProgress/:name', exerciseProgress.viewExercise);
+app.get('/exerciseProgress_A/:name', exerciseProgress_A.viewExercise_A);
+app.get('/exerciseProgress_B/:name', exerciseProgress_B.viewExercise_B);
 app.get('/', login.view);
 app.get('/settings', settings.view);
 // Example route

@@ -19,11 +19,17 @@
 
 .howToTitle {
 	text-align: center;
-  padding: 5px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.howToTitle h1{
+  text-align: center;
   display: inline-block;
   width: 100%;
-  color: #336db3;
+  background-color: #6da2e6;
   font-weight: bolder;
+  margin: 2px 0px;
+  padding: 10px 0px;
 }
 
 .videoContainer {  
@@ -62,6 +68,22 @@
   color: #336db3;
 }
 
+.nameTitle {
+  height: 30px;
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.nameTitle h1{
+  display: inline-block;
+  width: 100%;
+  font-size: 30px;
+  background-color: #336db3;
+  margin: 2px 0px;
+  padding: 10px 0px;
+  color: white;
+}
+
 .statsContainer {
  text-align: center;
  height: auto;
@@ -78,7 +100,7 @@
 }
 
 .emptyTh{
-  width: 30%;
+  width: 20%;
 }
 
 .titleTh{
@@ -123,6 +145,10 @@
 .setsTableTitle {
   margin-bottom: 10px;
   height: 50px;
+  text-align: center;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.428571429;
 }
 
 .buttonContainer {
@@ -136,16 +162,31 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  width: 20%;
 }
 
 #submitButton {
   background-color: lightgreen;
   font-weight: bolder;
+  width: 30%;
+  float: right;
 }
 
 #addSetButton {
   font-weight: bolder;
+  width: 65%;
+  float: left;
+
+}
+
+#submitButton_A {
+  background-color: lightgreen;
+  font-weight: bolder;
+  width: 30%;
+}
+
+#addSetButton_A {
+  font-weight: bolder;
+  width: 30%;
 
 }
 

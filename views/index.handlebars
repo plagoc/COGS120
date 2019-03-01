@@ -23,11 +23,10 @@
 <body>
 	<hr>
 
-	<!-- TODO: Create Search Bar (What will this do? Would it be easier to just have a box of most well-known workouts and thats it?) -->
 	<div class="container searchbar">
 		<div class="searchbar-content">
-			<input type="text" name="search" class="" placeholder="Search for a workout..." id="searchbar">
-			<button type="submit" id="searchbar-submit"><i class="fa fa-search"></i></button>
+			<input type="text" name="search" placeholder="Search for a workout..." id="searchbar">
+			<!-- <button type="submit" id="searchbar-submit"><i class="fa fa-search"></i></button> -->
 		</div>
 	</div>
 
@@ -37,11 +36,11 @@
   				Filter Workouts
   				<span class="caret"></span>
   			</button>
-  			<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+  			<ul class="dropdown-menu" id="dropDownMenu" aria-labelledby="dropdownFilter">
   			<!--<ul class="dropdown-menu" aria-labelledby="dropdownFilter" onload="addCustomWorkouts()">-->
 
-    			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeAtoZ()">Alphabetical (A-Z)</button></li> 
-    			<li class="filter"><button class="btn dropdown-item" type="button" onclick="alphabetizeZtoA()">Alphabetical (Z-A)</button></li> 
+    			<li class="filter"><button class="btn dropdown-item" id="filterBtn" type="button" onclick="alphabetizeAtoZ()">Alphabetical (A-Z)</button></li> 
+    			<li class="filter"><button class="btn dropdown-item" id="filterBtn" type="button" onclick="alphabetizeZtoA()">Alphabetical (Z-A)</button></li> 
     			<div id="addCustomWorkoutsHere"></div>
     			<!--
     			<li class="filter"><button class="btn dropdown-item" type="button" onclick="createFilter()">Create Filter</button></li> 
@@ -54,10 +53,9 @@
 	<div class="container" id="exercises">
 		<div class="row" id="exerciseList">
 			{{#each exercises}}
-			<div class='exercise col-lg-4' id="{{id}}">
-				<a href="/exerciseProgress/{{name}}" class="thumbnail">
-					<!-- <img src="images/{{image}}" alt="Lorem pixel image" class="img rounded"> -->
-					<h3 class="display-4" id="name">{{name}}</h3>
+			<div class='exercise col-lg-4' id="{{id}}" onClick="abTest('{{name}}')">
+				<a  class="thumbnail" id="exerciseLink" >
+					<h3 class="display-4" id="name" >{{name}}</h3>
 				</a>
 			</div>
 			{{/each}}

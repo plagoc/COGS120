@@ -9,8 +9,8 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("JS Connected!");
 	setPic(); 
-	setName();
-	setGoal();
+	setMeasurement();
+	setGraph();
 }
 
 function setPic() {
@@ -27,15 +27,15 @@ function setMeasurement() {
 	}
 }
 
-function setGraph() {
-	if (getGraphType() != false ) {
-		if (getGraphType() == 'bar' ) {
-			document.getElementById("barOptions").click();
-		} else {
-			document.getElementById("lineOptions").click();
-		}
-	}
-}
+// function setGraph() {
+// 	if (getGraphType() != false ) {
+// 		if (getGraphType() == 'bar' ) {
+// 			document.getElementById("barOptions").click();
+// 		} else {
+// 			document.getElementById("lineOptions").click();
+// 		}
+// 	}
+// }
 
 function setName() {
 	$('#name').text(getName());

@@ -36,6 +36,14 @@ function checkExerciseData(history) {
 			alert('Please enter a valid weight: [1-1000]');
 			return false;
 		} 
+		if( isNaN(history.weight[i]) ) {
+			alert('Please enter a valid weight: [1-1000]');
+			return false;
+		} 
+		if( isNaN(history.reps[i]) ) {
+			alert('Please enter a valid weight: [1-1000]');
+			return false;
+		} 
 	}
 	removeRows();
 	return true;
@@ -64,6 +72,7 @@ function storeExerciseData(name) {
 	 //printExercise(name);		
 	  		  storeExerciseDict(name, exerciseDict);
 	  		  populateProgressPage(name);
+	  		  document.getElementById("progressID").click();
 
   	} else {
   		  // Sorry! No Web Storage support..
@@ -101,6 +110,7 @@ function newHistoryEntry() {
   	var repsEntry = [];
   	var repItr = 0;
   	var weightItr = 0;
+  	var score = 0;
   	for(var i = 0; i < document.getElementsByTagName("input").length; i++) {
 				//add a check number function
 				if(i%2 == 0) {
@@ -111,9 +121,18 @@ function newHistoryEntry() {
 					repItr++;
 				}				
 	  }
-	  var newEntry = {date: dateEntry, sets: setsEntry, reps: repsEntry, weight: weightsEntry};
+
+	for(var i = 0; i <= setsEntry; i++) {
+		var weight = weightsEntry[i];
+		var reps = repsEntry[i];
+		score = score + (weight)*(reps*0.4);
+	}
+	score = score * (setsEntry + 1);
+	score = score/10;
+
+	var newEntry = {date: dateEntry, sets: setsEntry, reps: repsEntry, weight: weightsEntry, workoutScore: score};
 			
-	  return newEntry;
+	return newEntry;
 }
 
 function populateProgressPage(name) {
@@ -140,6 +159,11 @@ function populateProgressPage(name) {
 			dateOfExerciseH2.setAttribute('class','dateProgressTitle');
 			exerciseContainer.appendChild(dateOfExerciseH2);
 			dateOfExerciseH2.innerHTML = history[i].date;
+
+			var workoutScoreH2 = document.createElement("h2");
+			workoutScoreH2.setAttribute('class','dateProgressTitle');
+			exerciseContainer.appendChild(workoutScoreH2);
+			workoutScoreH2.innerHTML = "Score: " + Math.round(history[i].workoutScore);
 
 			var weightRepsTable = document.createElement("table");
 			weightRepsTable.setAttribute('class','weightRepsTable');
@@ -194,7 +218,7 @@ function populateProgressPage(name) {
 }
 
 function processWeight(weight) {
-	if(getAppMeasurement == 'kg') {
+	if(getAppMeasurement() == 'kg') {
 		return (weight * 2.204);
 	} else {
 		return (weight);
@@ -202,13 +226,12 @@ function processWeight(weight) {
 }
 
 function updateWeightInfo(weight) {
-	if(getAppMeasurement == 'lbs') {
+	if(getAppMeasurement() == 'lbs') {
 		return (Math.round(weight) + ' lbs');
 	} else {
 		return (Math.round(weight * 0.453592) + ' kg');
 	}
 }
-
 
 function getExerciseDict(exerciseName) {
 	  return JSON.parse(localStorage.getItem( exerciseName ));		

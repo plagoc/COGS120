@@ -26,11 +26,22 @@ function storeUserData(obj) {
     localStorage.setItem( 'userData', JSON.stringify(obj) );
 }
 
-
+function setUpUserData() {
+  var userData = {
+    name: 'Johnny AppleSeed',
+    goal: 'Plant Lots Of Apples!!',
+    profilePic: '/images/lorempixel.people.2.jpeg',
+    appMeasurement: 'kg',
+    graphType: 'line',
+    customWorkoutFilters: [] 
+  }
+  
+  return userData;
+}
 
 //Add this callback at bottom of facebook.js and add the required functionality in it 
 function changeUser(response) {
-  var userData = getUserData();
+  var userData = setUpUserData();
   var profileImg = response.picture.data.url;
   var name = response.name;
   if(name == null) {
@@ -39,6 +50,7 @@ function changeUser(response) {
   if(profileImg == null) {
     profileImg = '/images/lorempixel.abstract.1.jpeg';
   }
+  console.log(profileImg);
   userData.profilePic = profileImg;
   userData.name = name;
   storeUserData(userData);
