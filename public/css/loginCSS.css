@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   padding: 0;
   background-color: #17a2b8;
@@ -16,4 +16,36 @@ body {
 }
 #login .container #login-row #login-column #login-box #login-form {
   margin-top: -85px;
+}*/
+
+#email {
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid lightblue;
+  padding: 6px 12px;
+  margin-bottom: 10px; 
+} 
+
+#password {
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid lightblue;
+  padding: 6px 12px;
+  margin-bottom: 10px; 
+} 
+
+#loginBtn {
+  width: 100%;
+  margin-top: 10px
+}
+
+#signup-div, #facebook-div {
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+}
+
+#signup-span {
+  display: inline-block;
+  margin: 10px;
 }
