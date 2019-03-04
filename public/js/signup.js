@@ -13,13 +13,14 @@ function signup() {
 	$("#signup").click(function() {
 		console.log("Clicked!!!");
 		
-		/*
-		if($("#email").val() != "" && $("#password").val() != "") {
-			window.location.href = "/index/";
-		} else {
-			console.log("Forms not filled in");
-		}
-		*/
+		
+		// if($("#email").text() != "" && $("#password").text() != "") {
+		// 	window.location.href = "/index/";
+		// } else {
+		// 	console.log($("#email").text());
+		// 	console.log("Forms not filled in");
+		// }
+
 
 	});
 }
