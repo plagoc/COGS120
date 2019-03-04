@@ -28,17 +28,17 @@
         <form action="/index">
             <h3 class="text-center text-info">FitY'all</h3>
             
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="Email" required>
 
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Password" required>
             
             <input type="submit" name="login" id="loginBtn" class="btn btn-info btn-md col-md-12" value="Login"/>
 
             <div id="facebook-div">
-                <!-- <p class="facebookLogin">
-                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" ></fb:login-button>
-                </p> -->
-                <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>    
+                <p class="facebookLogin">
+                    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" ></fb:login-button> -->
+                    <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                </p>
             </div>
 
             <div id="signup-div">
