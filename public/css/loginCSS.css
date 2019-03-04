@@ -3,7 +3,6 @@
   width: 100%;
   border-bottom: 2px solid lightblue;
   padding: 6px 12px;
-  margin-bottom: 10px; 
 } 
 
 #password {
@@ -11,22 +10,35 @@
   width: 100%;
   border-bottom: 2px solid lightblue;
   padding: 6px 12px;
-  margin-bottom: 10px; 
+  margin-top: 7%;
 } 
 
 #loginBtn {
   width: 100%;
-  margin-top: 10px
+  margin-top: 7%
 }
 
-#signup-div, #facebook-div {
+#facebook-div {
   text-align: center;
   /*width: 100%;*/
   /*margin: 6px 12px;*/
-  margin-top: 10px
+  margin-top: 7%
 }
+
+#signup-div {
+  text-align: center;
+  margin-top: 7%; 
+} 
 
 #signup-span {
   display: inline-block;
   /*margin: 10px;*/
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+#login-container {
+  margin-top: 50%;
 }
