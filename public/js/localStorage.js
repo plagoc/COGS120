@@ -82,8 +82,8 @@ function storeExerciseData(name) {
 			document.getElementById("progressID").click();
 		}
   		// Sorry! No Web Storage support..
-  		console.log("No local Storage");
-  		alert("cannot use local Storage");
+  		// console.log("No local Storage");
+  		// alert("cannot use local Storage");
   	}
 }
 

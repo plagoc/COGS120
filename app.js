@@ -10,12 +10,13 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var profile = require('./routes/profile');
 var help = require('./routes/help');
-var friends = require('./routes/friends');
+// var friends = require('./routes/friends');
 var exerciseProgress = require('./routes/exerciseProgress');
 var exerciseProgress_A = require('./routes/exerciseProgress');
 var exerciseProgress_B = require('./routes/exerciseProgress');
 var login = require('./routes/login');
 var settings = require('./routes/settings');
+var signup = require('./routes/signup')
 
 var app = express();
 
@@ -42,7 +43,8 @@ if ('development' == app.get('env')) {
 app.get('/index', index.view);
 app.get('/profile', profile.view);
 app.get('/help', help.view);
-app.get('/friends', friends.view);
+app.get('/signup', signup.view);
+// app.get('/friends', friends.view);
 app.get('/exerciseProgress/:name', exerciseProgress.viewExercise);
 app.get('/exerciseProgress_A/:name', exerciseProgress_A.viewExercise_A);
 app.get('/exerciseProgress_B/:name', exerciseProgress_B.viewExercise_B);
