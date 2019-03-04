@@ -28,22 +28,30 @@ function setUpExerciseDict(nameOfExercise){
 
 function checkExerciseData(history) {
 	for (var i = 0; i<=history.sets; i++) {
-		if( history.reps[i] > 100 || history.reps[i] <= 0 || history.reps[i] == null) {
-			alert('Please enter a valid #Reps: [1-100]');
-			return false;
+		console.log("history[" + i + "]: weights - " + history.weight[i] + " --- reps - " + history.reps[i]);
+
+		// If the weight is negative AND rep is set to "deleted", then the row was JUST deleted,
+		// but we should still be able to proceed to the Progress Page
+		if( !((history.weight[i] <= 0) && (history.reps[i] == "deleted")) ) {
+			if( history.reps[i] > 100 || history.reps[i] <= 0 || history.reps[i] == null) {
+				alert('Please enter a valid #Reps: [1-100]');
+				return false;	
+			}
+			if( history.weight[i] > 1000 || history.weight[i] <= 0 || history.weight[i] == null) {
+				alert('Please enter a valid weight: [1-1000]');
+				return false;	
+			} 
+			if( isNaN(history.weight[i]) ) {
+				alert('Please enter a valid weight: [1-1000]');
+				return false;	
+			} 
+			if( isNaN(history.reps[i]) ) {
+				alert('Please enter a valid #Reps: [1-100]');
+				return false;	
+			} 
 		}
-		if( history.weight[i] > 1000 || history.weight[i] <= 0 || history.weight[i] == null) {
-			alert('Please enter a valid weight: [1-1000]');
-			return false;
-		} 
-		if( isNaN(history.weight[i]) ) {
-			alert('Please enter a valid weight: [1-1000]');
-			return false;
-		} 
-		if( isNaN(history.reps[i]) ) {
-			alert('Please enter a valid weight: [1-1000]');
-			return false;
-		} 
+
+		
 	}
 	removeRows();
 	return true;
@@ -59,25 +67,23 @@ function storeExerciseData(name) {
   			var exerciseDict = setUpExerciseDict(name);
   			storeExerciseDict(name, exerciseDict);
   		} 
-  			console.log("storedata");
-	  		var exerciseDict = getExerciseDict(name);
-	  		var newHistEntry = newHistoryEntry();
-	  		if( checkExerciseData(newHistEntry) )  {
-	  			exerciseDict.history.push( newHistEntry );
-	  		} else {
-	  			return false;
-	  		}
-
-
-	 //printExercise(name);		
-	  		  storeExerciseDict(name, exerciseDict);
-	  		  populateProgressPage(name);
-	  		  document.getElementById("progressID").click();
-
-  	} else {
-  		  // Sorry! No Web Storage support..
-  		  console.log("No local Storage");
-  		  alert("cannot use local Storage");
+		console.log("storedata");
+  		var exerciseDict = getExerciseDict(name);
+  		var newHistEntry = newHistoryEntry();
+  		if( checkExerciseData(newHistEntry) )  { // Checking here
+  			exerciseDict.history.push( newHistEntry );
+  			console.log(newHistEntry);
+  		} else {
+  			return false;
+  		}
+		storeExerciseDict(name, exerciseDict);
+		populateProgressPage(name);
+		if(document.getElementById("progressID") != null) {
+			document.getElementById("progressID").click();
+		}
+  		// Sorry! No Web Storage support..
+  		// console.log("No local Storage");
+  		// alert("cannot use local Storage");
   	}
 }
 
@@ -125,7 +131,11 @@ function newHistoryEntry() {
 	for(var i = 0; i <= setsEntry; i++) {
 		var weight = weightsEntry[i];
 		var reps = repsEntry[i];
-		score = score + (weight)*(reps*0.4);
+
+		if( (weight > 0) && (reps > 0) ) {
+			score = score + (weight)*(reps*0.4);
+		}
+		
 	}
 	score = score * (setsEntry + 1);
 	score = score/10;
@@ -149,7 +159,6 @@ function populateProgressPage(name) {
 
 		var exerciseDict = getExerciseDict(name);
 		var history = exerciseDict.history;
-
 	for(var i = 0; i < history.length; i++ ) {
 
 			var exerciseContainer = document.createElement("div");
@@ -190,28 +199,31 @@ function populateProgressPage(name) {
 			rowTitle.appendChild(repsTitle);
 			repsTitle.innerHTML	= "reps";
 
-
+			// Adding the rep rows and weight rows
 			for (var j = 0; j < history[i].reps.length; j++ ) {
-					var row = document.createElement("tr");
-					row.setAttribute('class','progressRow');
-					weightRepsTable.appendChild(row);
-					row.setAttribute('class','unit-table');
+					if((history[i].weight[j] != "-1") && (history[i].reps[j]) != "deleted") {
+						var row = document.createElement("tr");
+						row.setAttribute('class','progressRow');
+						weightRepsTable.appendChild(row);
+						row.setAttribute('class','unit-table');
 
-					var set = document.createElement("th");
-					set.setAttribute('class','progressSet');
-					row.appendChild(set);
-					set.innerHTML = j + 1;
+						var set = document.createElement("th");
+						set.setAttribute('class','progressSet');
+						row.appendChild(set);
+						set.innerHTML = j + 1;
 
-					var weight = document.createElement("th");
-					weight.setAttribute('class','progressWeight');	
-					weight.id = "weightToUpdate";				
-					row.appendChild(weight);
-					weight.innerHTML = updateWeightInfo(history[i].weight[j]);
+						var weight = document.createElement("th");
+						weight.setAttribute('class','progressWeight');	
+						weight.id = "weightToUpdate";				
+						row.appendChild(weight);
+						weight.innerHTML = updateWeightInfo(history[i].weight[j]);
 
-					var reps = document.createElement("th");
-					reps.setAttribute('class','progressReps')
-					row.appendChild(reps);
-					reps.innerHTML	= history[i].reps[j];
+						var reps = document.createElement("th");
+						reps.setAttribute('class','progressReps')
+						row.appendChild(reps);
+						reps.innerHTML	= history[i].reps[j];
+					}
+					
 			}
 	}
 	
