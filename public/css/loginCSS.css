@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 gebody {
   margin: 0;
@@ -12,10 +13,49 @@ gebody {
   height: 320px;
   border: 1px solid #9C9C9C;
   background-color: #EAEAEA;
+=======
+#email {
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid lightblue;
+  padding: 6px 12px;
+} 
+
+#password {
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid lightblue;
+  padding: 6px 12px;
+  margin-top: 7%;
+} 
+
+#loginBtn {
+  width: 100%;
+  margin-top: 7%
 }
-#login .container #login-row #login-column #login-box #login-form {
-  padding: 20px;
+
+#facebook-div {
+  text-align: center;
+  /*width: 100%;*/
+  /*margin: 6px 12px;*/
+  margin-top: 7%
+>>>>>>> e88dbaf0b3d25641ad029060c10aee6d5f2589d7
 }
-#login .container #login-row #login-column #login-box #login-form {
-  margin-top: -85px;
+
+#signup-div {
+  text-align: center;
+  margin-top: 7%; 
+} 
+
+#signup-span {
+  display: inline-block;
+  /*margin: 10px;*/
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+#login-container {
+  margin-top: 50%;
 }

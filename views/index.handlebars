@@ -19,10 +19,10 @@
 	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
 	<link rel="stylesheet" type="text/css" href="/css/indexCSS.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
 </head>
 <body>
-	<hr>
-
 	<div class="container searchbar">
 		<div class="searchbar-content">
 			<input type="text" name="search" placeholder="Search for a workout..." id="searchbar">
@@ -54,7 +54,7 @@
 		<div class="row" id="exerciseList">
 			{{#each exercises}}
 			<div class='exercise col-lg-4' id="{{id}}" onClick="abTest('{{name}}')">
-				<a  class="thumbnail" id="exerciseLink" >
+				<a class="thumbnail" id="exerciseLink" >
 					<h3 class="display-4" id="name" >{{name}}</h3>
 				</a>
 			</div>

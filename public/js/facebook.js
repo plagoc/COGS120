@@ -29,7 +29,7 @@ function storeUserData(obj) {
 function setUpUserData() {
   var userData = {
     name: 'Johnny AppleSeed',
-    goal: 'Plant Lots Of Apples!!',
+    goal: 'Lose Weight',
     profilePic: '/images/lorempixel.people.2.jpeg',
     appMeasurement: 'kg',
     graphType: 'line',

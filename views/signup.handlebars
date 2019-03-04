@@ -19,14 +19,20 @@
 </head>
 <body>
    <div class="container">
-        <div class="form-group">
-            <form action="/index"> 
-                <label for="email">Email</label>
+        <form action="/index"> 
+            <h3 class="text-center text-info">Sign Up</h3>
+
+        <div class="form-group"> 
+                <input name="name" id="name" type="text" placeholder="First name" required> 
+
+                <input name="lName" id="lName" type="text" placeholder="Last name" required> 
+
                 <input name="email" id="email" type="email" placeholder="Enter your email..." required> 
 
-                <label for="password">Password</label>
                 <input name="password id="password" type="password" placeholder="Enter a password..." required>
-                
+                <!--
+                 <input name="goal" id="goal" type="text" placeholder="Enter your goal..."> 
+                -->
                 <input id="signup" type="submit" value="Create My Account"></input>
             </form>
         </div>

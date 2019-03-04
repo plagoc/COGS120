@@ -1,7 +1,7 @@
 /* Includes profile and settings CSS */
 
 .jumbotron h1 {
-	text-align: center
+    text-align: center;
 }
 
 div .setting {
@@ -17,6 +17,11 @@ div .setting {
 	text-align: center;
 	margin: auto;
 }
+
+#profileImg {
+    width: 75%;
+}
+
 
 .profile {
 	text-align: center;
