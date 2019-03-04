@@ -16,8 +16,13 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/loginCSS.css">
 
-  {{> facebook}}
+    {{> facebook}}
+
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=3059641747395108&autoLogAppEvents=1"></script>
 </head>
+
+
 <body>
     <div class="container">
         <form action="/index">
