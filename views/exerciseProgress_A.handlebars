@@ -54,12 +54,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	ga('send', 'pageview');
 	</script>
 
-	<script type="text/javascript" src="/js/analytics.js"></script>
-
-
-
-
-	
+	<script type="text/javascript" src="/js/analytics.js"></script>	
 
 </head>
 
@@ -108,7 +103,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<div class="buttonContainer">
 					<button class="button" id="deleteSetButton_A" onclick="deleteSet()">Delete Set</button>
 					<button class="button" id="addSetButton_A" onclick="addSet()">+</button>
-					<button class="button" id="submitButton_A" onclick="storeExerciseData('{{name}}')">Submit</button>
+					<button class="button" id="submitButton_A" onclick="storeExerciseData('{{name}}'); submitButton_A();">Submit</button>
 				</div>
 
 			</div>

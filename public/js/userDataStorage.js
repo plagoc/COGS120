@@ -20,10 +20,22 @@
 		profilePic: '/images/lorempixel.people.2.jpeg',
 		appMeasurement: 'kg',
 		graphType: 'line',
+		abTesting: getAbTest(),
 		customWorkoutFilters: [] 
 	}
 	
 	return userData;
+}
+
+function getAbTest(){
+	rand = Math.random();
+
+	if (rand < 0.5) {
+		return 'A';
+		
+	} else {
+  		return 'B';		
+	}
 }
 
 function startup() {
@@ -211,6 +223,7 @@ function initializeExerciseTab() {
  */
 
 function getUserData() {
+	if(!startup()) return false;
 	return JSON.parse(localStorage.getItem( 'userData' ));
 }
 

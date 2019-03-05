@@ -53,10 +53,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	</script>
 
 	<script type="text/javascript" src="/js/analytics.js"></script>
-
-
-
-
 	
 
 </head>
@@ -105,7 +101,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				</table>
 				<div class="buttonContainer">
 					<button class="button" id="addSetButton" onclick="addSet()"> + </button>
-					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}')">Submit</button>
+					<button class="button" id="submitButton" onclick="storeExerciseData('{{name}}'); submitButton_B(); ">Submit</button>
 					<button class="button" id="deleteSetButton" onclick="deleteSet()">Delete a Set</button>
 				</div>
 

@@ -1,29 +1,41 @@
 function infoTabClick_A() {
-	console.log("Info tab click A");
-	ga('create', 'UA-135624501-1', 'auto');
-	ga("send", "event", 'infoTab', 'click');
+	ga("send", "event", 'infoTabA', 'click');
+	ga("send", "event", 'infoTabB', 'click');
 }
 
 function infoTabClick_B() {
-	console.log("Info tab click B");
-	ga('create', 'UA-135624501-1', 'auto');
+	ga("send", "event", 'infoTabB', 'click');
 	ga("send", "event", 'infoTab', 'click');
 }
 
 function recordTab_A() {
+	ga("send", "event", 'recordTabA', 'click');
 	ga("send", "event", 'recordTab', 'click');
 }
 
 function recordTab_B() {
+	ga("send", "event", 'recordTabB', 'click');
 	ga("send", "event", 'recordTab', 'click');
 }
 
 function progressTab_A() {
+	ga("send", "event", 'progressTabA', 'click');
 	ga("send", "event", 'progressTab', 'click');
 }
 
 function progressTab_B() {
+	ga("send", "event", 'progressTabB', 'click');
 	ga("send", "event", 'progressTab', 'click');
+}
+
+function submitButton_A() {
+	ga("send", "event", 'progressTabA', 'click');
+	ga("send", "event", 'submitButton', 'click');
+}
+
+function submitButton_B() {
+	ga("send", "event", 'progressTabB', 'click');
+	ga("send", "event", 'submitButton', 'click');
 }
 
 
