@@ -24,6 +24,7 @@
 	<script src="/js/tabs.js"></script>
 	<script src="/js/addRow.js"></script>
 	<script type="text/javascript" src="/js/exerciseProgress.js"></script>
+	<script type="text/javascript" src="/js/analytics.js"></script>
 
 
 	
@@ -38,9 +39,9 @@
 				<h1>{{name}}</h1>
 			</div>
 			<div class="exerciseProgressTabs">
-				<button class="tablinks" onclick="changeTab(event, 'infoTab')">Info</button>
-				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab'); initializeExerciseTab();">Record</button>
-				<button class="tablinks" id="progressID" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}');">Progress</button>
+				<button class="tablinks" onclick="changeTab(event, 'infoTab'); infoTabClick_B();">Info</button>
+				<button class="tablinks" id="defaultOpen" onclick="changeTab(event, 'exerciseTab'); initializeExerciseTab(); recordTab_B();">Record</button>
+				<button class="tablinks" id="progressID" onclick="changeTab(event, 'progressTab'); populateProgressPage('{{name}}'); progressTab_B();">Progress</button>
 			</div>
 		</div>
 
