@@ -16,17 +16,17 @@ div .setting {
 .confirm {
 	text-align: center;
 	margin: auto;
+    top:10px;
+    padding-top: 10px;
 }
 
 #profileImg {
     width: 75%;
 }
 
-
 .profile {
 	text-align: center;
 	margin: 10px;
-	/*padding: 10px;*/
 	padding: 10px;
 }
 
