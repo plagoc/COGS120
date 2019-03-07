@@ -10,7 +10,6 @@ function initializePage() {
 	// FIXME: Below two functions are ONLY for index, so only do the below functions IF on index page
 	search();
 	dropdown();
-	rand = Math.random();	
 	//$('#exerciseList').show();
 	//$('#FilterName').hide();
 	//$('#customForm').hide();
@@ -18,7 +17,8 @@ function initializePage() {
 }
 
 function abTest(name){
-	if (rand < 0.5) {
+
+	if (getUserData().abTesting == 'B') {
 		document.location.href = ("/exerciseProgress_B/"+name);
 		
 	} else {

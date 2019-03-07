@@ -31,13 +31,12 @@ function deleteSet() {
 	      				targetTableRow[0].style.display="none"; // Hides the set
 	      				deletedASet = true;
 	    			} else {
-	    				alert("Cannot delete an empty set. Please choose another set.");
+	    				alert("Cannot delete an empty set.");
+	    				deletedASet = true;
 	    			}
 
     			}
     		}
 		});
 	});
-	
-
 }
