@@ -48,12 +48,21 @@ function setGoal() {
 function toggleKg() {
 	console.log("clicked kg!");
 	$("#kgOptions").button('toggle');
+
+	if($('#lbsOptions').hasClass("active")) {
+		console.log("lbs has class active");
+		$("#lbsOptions").button('toggle');
+	}
 	storeMeasurmentType('kg');
 }
 
 function toggleLbs() {
 	console.log("clicked lbs!");
 	$("#lbsOptions").button('toggle');
+	
+	if($('#kgOptions').hasClass("active")) {
+		$("#kgOptions").button('toggle');
+	}
 	storeMeasurmentType('lbs');
 
 }

@@ -61,21 +61,28 @@
 			<div class="col-xs-1">
 				<i id="helpIcon" class="trigger_popup fas fa-info-circle" onclick="getHelp('weightInfo')"></i>	
 			</div>
-			<div class="col-xs-8">
+			<div class="col-xs-7 profileValue">
+
+
 				<div id='weightOptionsDiv' class="row">
-					<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
-						<div class="btn-group btn-group-toggle col-xs-6" data-toggle="buttons" id="weights">
-							<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
+
+					<div class="btn-group btn-group-toggle" id="weights">
+						<div class="col-xs-6" data-toggle="buttons" id="weights">
+							<label class="btn btn-secondary" id="lbsOptions" data-toggle="buttons" onclick="toggleLbs()">
 								<input type="radio" autocomplete="off" name="options" class="raleway-text"> Pounds
 							</label>
 						</div>
-						<div class="btn-group btn-group-toggle col-xs-6" data-toggle="buttons" id="weights">
-							<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
+
+						<div class="col-xs-6" data-toggle="buttons" id="weights">
+							<label class="btn btn-secondary active" id="kgOptions" data-toggle="buttons" onclick="toggleKg()">
 								<input type="radio" name="options" autocomplete="off" class="raleway-text"> Kilograms
 							</label>
 						</div>
 					</div>
+
 				</div>
+
+
 			</div>
 
 

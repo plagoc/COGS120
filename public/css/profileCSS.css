@@ -32,6 +32,10 @@
     width: 25%;
 }
 
+#weightOptionsDiv {
+    margin-top: 20px;
+}
+
 .profileHeader {
     font-style: 'Raleway', sans-serif;
     font-weight: bold;
@@ -50,7 +54,7 @@ input.inputText, input[type='radio'] {
     font-style: 'Raleway', sans-serif;
 }
 
-#helpIcon {
+#helpIcon, .profileValue {
 	margin-left: 10px;
 }
 
