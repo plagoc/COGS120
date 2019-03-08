@@ -1,11 +1,15 @@
-/* Includes profile and settings CSS */
-
-.jumbotron h1 {
+ /*Includes profile and settings CSS */
+.jumbotron {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
-div .setting {
-	text-align: center;
+.raleway-text {
+    font-family: 'Raleway', sans-serif;   
+}
+
+.content {
+    /*border: 1px solid black;*/
 }
 
 .edit {
@@ -21,29 +25,44 @@ div .setting {
 }
 
 #profileImg {
-    width: 75%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 }
 
-.profile {
-	text-align: center;
-	margin: 10px;
-	padding: 10px;
+.profileHeader {
+    font-style: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-right: 20px; 
 }
 
-input.inputText {
-	width: 50%;
-	margin: auto;
+input.inputText, input[type='radio'] {
+	/*width: 50%;*/
+    font-style: 'Raleway', sans-serif;
+	margin-top: 20px;
 }
 
 #lbsOptions, #kgOptions, #barOptions, #lineOptions, #name, #goal {
-	font-size: 1.7em;
-	font-weight: bold;
+	/*font-size: 1.7em;*/
+	/*font-weight: bold;*/
+    font-style: 'Raleway', sans-serif;
 }
 
 #helpIcon {
 	margin-left: 10px;
 }
 
+#buttonOptions {
+    text-align: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+#signoutDiv {
+    margin-top: 10px;
+}
 
 
 /* Popup box BEGIN */
@@ -52,6 +71,7 @@ input.inputText {
     cursor:pointer;
     display:none;
     height:100%;
+    margin-left: -17px;
     position:fixed;
     text-align:center;
     top:0;
@@ -103,4 +123,4 @@ input.inputText {
     display: inline-block;
     font-weight: bold;
 }
-/* Popup box BEGIN */
+/* Popup box BEGIN 

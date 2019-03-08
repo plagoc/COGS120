@@ -29,8 +29,8 @@ function storeUserData(obj) {
 function setUpUserData() {
   var userData = {
     name: 'Johnny AppleSeed',
-    goal: 'Lose Weight',
-    profilePic: '/images/lorempixel.people.2.jpeg',
+    goal: 'Plant lots of Apples!!!',
+    profilePic: '/images/avatar2.png',
     appMeasurement: 'kg',
     graphType: 'line',
     customWorkoutFilters: [] 
@@ -48,7 +48,7 @@ function changeUser(response) {
     name = 'Johnny';
   }
   if(profileImg == null) {
-    profileImg = '/images/lorempixel.abstract.1.jpeg';
+    profileImg = '/images/avatar2.png';
   }
   console.log(profileImg);
   userData.profilePic = profileImg;

@@ -95,13 +95,13 @@ function confirm() {
 	if(name.length  == 0) {
 		name = getName();
 	}	
-	$("#name").replaceWith('<h1 class="profile" id="name">'+name+'</h1>');
+	$("#name").replaceWith('<h2 class="raleway-text profileValue" id="name">'+name+'</h2>');
 
 	var goal = $("#goal").val();
 	if(goal.length  == 0) {
 		goal = getGoal();
 	}	
-	$("#goal").replaceWith('<h1 class="profile" id="goal">'+goal+'</h1>');
+	$("#goal").replaceWith('<h2 class="raleway-text profileValue" id="goal">'+goal+'</h2>');
 
 	$("#edit").show();
 	$("#confirm").hide();
@@ -136,7 +136,7 @@ function logout() {
 		// console.log("logging out");
 	// });
 	// For now, just clear userData
-	updateProfleInfo("Johnny", "Work out", '/images/lorempixel.people.2.jpeg');
+	updateProfleInfo("Johnny", "Work out", '/images/avatar2.png');
 	window.location.href = "/";
 }
 

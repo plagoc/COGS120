@@ -17,7 +17,7 @@
  	var userData = {
 		name: 'Johnny AppleSeed',
 		goal: 'Plant Lots Of Apples!!',
-		profilePic: '/images/lorempixel.people.2.jpeg',
+		profilePic: '/images/avatar2.png',
 		appMeasurement: 'kg',
 		graphType: 'line',
 		abTesting: getAbTest(),

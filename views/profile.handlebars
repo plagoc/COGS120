@@ -20,68 +20,109 @@
 	<link rel="stylesheet" type="text/css" href="/css/profileCSS.css">
 	<link rel="stylesheet" type="text/css" href="/css/navbarCSS.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">	
+
 </head>
 <body>
-	<div class="container">
+	<div class="container content">
 		<div class="jumbotron">
-			<h1>Settings</h1>
+			<h1 class="raleway-text">Profile</h1>
 		</div>
-	</div>
-
-
-	<div class="container-fluid">
-		
 		<div class="row">
-			<div class="col-lg-12 profile">
-				<img id="profileImg" src="/images/lorempixel.abstract.1.jpeg" alt="lorem pixel img" class="img-thumbnail img-fluid">
+			<div class="col-xs-12 profile">
+				<img id="profileImg" src='/images/avatar2.png' alt="lorem pixel img" class="img-fluid">
 			</div>
 		</div>
 		
 		<div class="row">
-			<u><h4 class="profile">Name</h4></u>
-			<div class="col-lg-12">
-				<h1 class="profile" id="name" onload="setName()"></h1>
+			<div class="col-xs-4">
+				<b><h2 class="raleway-text profileHeader">Name</h2></b>
+			</div>
+			<div class="col-xs-8">
+				<h2 class="raleway-text profileValue" id="name" onload="setName()"></h2>
 			</div>
 		</div>
 
 		<div class="row">
-			<u><h4 class="profile">Goal</h4></u>
-			<div class="col-lg-12">
-				<h1 class="profile" id="goal" onload="setGoal()"></h1>
+			<div class="col-xs-4">
+				<b><h2 class="raleway-text profileHeader">Goal</h2></b>
+			</div>
+			<div class="col-xs-8">
+				<h2 class="raleway-text profileValue" id="goal" onload="setGoal()"></h2>
 			</div>
 		</div>
 
-				<!-- added the weight into profile -->
+		<!-- added the weight into profile -->
+
 		<div class="row">
-			<div class="col-lg-12 setting">
-				<u><h4 class="profile" id="weightHeader">Weight<i id="helpIcon" class="trigger_popup fas fa-info-circle" onclick="getHelp('weightInfo')"></i></h4></u>
+			<div class="col-xs-3">
+				<b><h2 class="raleway-text profileHeader" id="weightHeader">Weight</h2><b>
 			</div>
+			<div class="col-xs-1">
+				<i id="helpIcon" class="trigger_popup fas fa-info-circle" onclick="getHelp('weightInfo')"></i>	
+			</div>
+			<div class="col-xs-8">
+				<div id='weightOptionsDiv' class="row">
+					<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
+						<div class="btn-group btn-group-toggle col-xs-6" data-toggle="buttons" id="weights">
+							<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
+								<input type="radio" autocomplete="off" name="options" class="raleway-text"> Pounds
+							</label>
+						</div>
+						<div class="btn-group btn-group-toggle col-xs-6" data-toggle="buttons" id="weights">
+							<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
+								<input type="radio" name="options" autocomplete="off" class="raleway-text"> Kilograms
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+			<!-- 	<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
+					<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
+						<input type="radio" autocomplete="off" name="options" class="raleway-text"> Pounds
+					</label>
+					<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
+						<input type="radio" name="options" autocomplete="off" class="raleway-text"> Kilograms
+					</label>
+				</div> -->
 		</div>
 			
 		<div class="hover_bg"> <!-- Div class shows the background when pop up is displayed; from https://html-online.com/articles/simple-popup-box/ -->
 			<span class="helper"></span>
 			<div>
 				<div class="popupCloseButton">Close</div>
-				<p id="info"></p>				
+				<p id="info" class="raleway-text"></p>				
 			</div>
 		</div>
 
-		<div class="col-lg-6 setting">
-			<div class="btn-group btn-group-toggle" data-toggle="buttons" id="weights">
+		
 
-				<label class="btn btn-secondary active" id="lbsOptions" onclick="toggleLbs()">
-					<input type="radio" autocomplete="off" name="options"  > Pounds
-				</label>
-				<label class="btn btn-secondary" id="kgOptions" onclick="toggleKg()">
-					<input type="radio" name="options" autocomplete="off" > Kilograms
-				</label>
+		<div id="buttonOptions">
+			<div class="row">
+			<div class='col-xs-12'>
+				<button type="button" class="raleway-text edit btn btn-lg btn-primary mr-1" onclick="edit()" id="edit">Edit Profile</button>
+				<button type="button" class="raleway-text confirm btn btn-lg btn-primary mr-1" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>
+
+			</div>
+			</div>
+
+			<div class="row" id="signoutDiv">
+				<div class='col-xs-12'>
+					<span>
+						<button class='raleway-text btn btn-lg btn-secondary' role="button" onclick="logout()">Sign Out</button>
+					</span>
+				</div>
 			</div>
 		</div>
+		
 
-		<div class="profile">
-			<button type="button" class="edit btn btn-lg btn-primary mr-1" onclick="edit()" id="edit">Edit Profile</button>
-			<button type="button" class="confirm btn btn-lg btn-primary mr-1" id="confirm" onclick="confirm()" style="display: none;">Confirm</button>
-		</div>
 	</div>	
 
 	<!--
@@ -90,9 +131,7 @@
 	</div>
 -->
 
-	<div class="profile">
-		<button class='btn btn-secondary' role="button" onclick="logout()">Sign Out</button>
-	</div>
+	
  	
 
 	<!-- Floor Navbar -->
